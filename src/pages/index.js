@@ -7,7 +7,7 @@ const Button = tw.button`
 
 export default function Home() {
   return (
-    <div>
+    <div className="container mx-auto">
       <h1>Hi people</h1>
       <Button>Activate</Button>
     </div>
