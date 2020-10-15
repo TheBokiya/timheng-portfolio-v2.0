@@ -15,19 +15,15 @@
   },
   "dependencies": {
     "gatsby": "^2.24.67",
-    "gatsby-plugin-sass": "^2.3.16",
+    "gatsby-plugin-postcss": "^3.0.3",
     "jss": "^10.4.0",
-    "node-sass": "^4.14.1",
+    "postcss": "^8.1.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "tailwindcss": "^1.8.13"
   },
   "devDependencies": {
-    "@emotion/core": "^10.0.35",
-    "@emotion/styled": "^10.0.27",
-    "gatsby-plugin-emotion": "^4.3.13",
-    "prettier": "2.1.2",
-    "twin.macro": "^1.10.0"
+    "prettier": "2.1.2"
   },
   "repository": {
     "type": "git",

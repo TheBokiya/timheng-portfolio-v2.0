@@ -1,15 +1,13 @@
-import React from "react"
-import tw from "twin.macro"
-
-const Button = tw.button`
-  bg-blue-500 hover:bg-blue-800 text-white p-2 rounded
-`
+import React from "react";
+import Layout from "../components/layout";
 
 export default function Home() {
   return (
-    <div className="container mx-auto">
-      <h1>Hi people</h1>
-      <Button>Activate</Button>
-    </div>
-  )
+    <Layout>
+      <div>
+        <h1>Hi people</h1>
+        <a>Testing PostCSS</a>
+      </div>
+    </Layout>
+  );
 }
