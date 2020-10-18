@@ -25,13 +25,13 @@ const contacts = [
 export default function Home() {
   return (
     <Layout>
-      <h1 className="text-6xl my-10">> Hello! I'm Tim.</h1>
+      <h1 className="text-6xl my-10">&gt; Hello! I&apos;m Tim.</h1>
       <div className="lg:w-3/4 text-2xl">
         <p className="text-3xl mb-5">Welcome to my personal portfolio.</p>
         <p>
-          A UX/UI designer + Front-End developer and a coffee addict. I'm very
-          passionate about digital design and also a lowkey admirer of everyday
-          design.
+          A UX/UI designer + Front-End developer and a coffee addict. I&apos;m
+          very passionate about digital design and also a lowkey admirer of
+          everyday design.
         </p>
         <p>
           Full-time Chelsea supporter, pop-culture junkie and master of memes.

@@ -28,6 +28,10 @@
     "tailwindcss": "^1.9.4"
   },
   "devDependencies": {
+    "eslint": "^7.11.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^6.13.0",
+    "eslint-plugin-react": "^7.21.4",
     "prettier": "2.1.2"
   },
   "repository": {
