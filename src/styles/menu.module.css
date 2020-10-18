@@ -1,3 +1,4 @@
-a {
-    letter-spacing: 0.5em;
+.container {
+  background-color: theme("colors.navy");
+  color: theme("colors.white");
 }
