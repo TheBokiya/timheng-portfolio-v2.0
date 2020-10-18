@@ -1,3 +1,21 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+/* import google font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap');
+
+html, body {
+    background-color: theme('colors.white');
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    font-weight: 300;
+    color: theme("colors.darkGrey");
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 900;
+    color: theme("colors.blue")
+}
