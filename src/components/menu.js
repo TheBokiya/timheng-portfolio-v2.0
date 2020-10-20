@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import menuStyles from "../styles/menu.module.css";
+import menuStyles from "../build/styles/menu.module.css";
 
 const menuItems = [
   {

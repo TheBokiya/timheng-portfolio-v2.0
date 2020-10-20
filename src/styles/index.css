@@ -24,8 +24,4 @@ h5,
 h6 {
   font-weight: 900;
   color: theme("colors.navy");
-
-  &:hover {
-    color: pink;
-  }
 }

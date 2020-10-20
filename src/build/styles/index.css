@@ -1,0 +1,1 @@
+@tailwind base;@tailwind components;@tailwind utilities;@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;700&display=swap");body,html{background-color:theme("colors.white")}body{font-family:Zilla Slab,serif;font-weight:400;color:theme("colors.darkGrey")}h1,h2,h3,h4,h5,h6{font-weight:900;color:theme("colors.navy")}
