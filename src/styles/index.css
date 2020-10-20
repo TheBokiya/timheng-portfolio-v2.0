@@ -1,6 +1,6 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* import google font */
 @import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;700&display=swap");
@@ -24,4 +24,8 @@ h5,
 h6 {
   font-weight: 900;
   color: theme("colors.navy");
+
+  &:hover {
+    color: pink;
+  }
 }
