@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../components/layout";
 import LinkWithIcon from "../components/linkWithIcon";
 import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faAt } from "@fortawesome/free-solid-svg-icons";
+import { faAt } from "@fortawesome/pro-duotone-svg-icons";
 
 const contacts = [
   {
