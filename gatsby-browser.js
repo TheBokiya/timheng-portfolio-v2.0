@@ -1,1 +1,2 @@
-import "./src/build/styles/index.css";
+import "./src/styles/tailwind.scss";
+import "./src/styles/index.scss";
