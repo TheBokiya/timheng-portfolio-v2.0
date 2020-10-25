@@ -10,7 +10,7 @@ export default function About() {
       </div>
       <div className="flex mt-5">
         <div className="sm:w-3/4">
-          <p className="text-1xl">
+          <p className="text-lg">
             As an individual who is intrigued by how people and technology
             intertwine, I have developed interests in UX Design, Visual
             Analytics and Web technologies. My interests take me everywhere in
@@ -23,6 +23,9 @@ export default function About() {
         </div>
       </div>
       <div className={"h-1 highlight my-5"}>&nbsp;</div>
+      <div>
+        <h1>Qualifications</h1>
+      </div>
     </Layout>
   );
 }

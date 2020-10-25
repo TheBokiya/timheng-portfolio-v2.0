@@ -27,7 +27,7 @@ export default function Home() {
     <Layout>
       <div className="grid place-content-center">
         <div>
-          <h1 className="text-6xl my-10 inline-block">
+          <h1 className="text-6xl my-10 font-black">
             <span className="text-purple mr-5">&gt;</span>Hello! I&apos;m Tim.
           </h1>
           <div className="lg:w-3/4 text-2xl">
