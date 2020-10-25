@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import menuStyles from "../styles/menu.module.scss";
+import menuStyles from "../styles/menu.module.css";
 
 const menuItems = [
   {
@@ -8,8 +8,8 @@ const menuItems = [
     link: "/",
   },
   {
-    page: "Projects",
-    link: "/projects",
+    page: "Portfolio",
+    link: "/portfolio",
   },
   {
     page: "Publications",

@@ -1,14 +1,14 @@
 import React from "react";
 import Layout from "../components/layout";
 import LinkWithIcon from "../components/linkWithIcon";
-import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faAt } from "@fortawesome/pro-duotone-svg-icons";
 
 const contacts = [
   {
-    name: "thebokiya",
-    icon: faInstagram,
-    link: "https://www.instagram.com/thebokiya/",
+    name: "TheBokiya",
+    icon: faGithub,
+    link: "https://github.com/TheBokiya",
   },
   {
     name: "timbheng",
@@ -16,7 +16,7 @@ const contacts = [
     link: "https://www.linkedin.com/in/timbheng/",
   },
   {
-    name: "hengbodyka",
+    name: "hengbodyka[at]gmail[dot]com",
     icon: faAt,
     link: "mailto:hengbodyka@gmail.com?Subject=Hello",
   },
