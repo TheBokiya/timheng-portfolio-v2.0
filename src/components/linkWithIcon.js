@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import linkStyle from "../styles/link.module.css";
+import linkStyle from "../assets/styles/link.module.css";
 
 export default function linkWithIcon(props) {
   return (

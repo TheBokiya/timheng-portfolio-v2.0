@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/pro-light-svg-icons";
-import menuStyles from "../styles/menu.module.css";
+import menuStyles from "../assets/styles/menu.module.css";
 
 const menuItems = [
   {

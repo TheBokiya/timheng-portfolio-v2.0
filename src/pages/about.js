@@ -9,7 +9,7 @@ export default function About() {
         <title>Tim Bodyka Heng | About</title>
       </Helmet>
       <div className="mt-5">
-        <h1 className="text-4xl text-purple">Me?</h1>
+        <h1 className="text-4xl text-purple font-black">Me?</h1>
         <h2 className="text-2xl text-navy">Let me tell you a bit about me.</h2>
       </div>
       <div className="flex mt-5">
@@ -25,10 +25,11 @@ export default function About() {
             a team.
           </p>
         </div>
+        <div className="sm:w-1/4"></div>
       </div>
       <div className={"h-1 highlight my-5"}>&nbsp;</div>
       <div>
-        <h1>Qualifications</h1>
+        <h1 className="text-4xl text-purple font-black">Qualifications</h1>
       </div>
     </Layout>
   );
