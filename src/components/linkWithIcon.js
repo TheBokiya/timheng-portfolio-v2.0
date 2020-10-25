@@ -1,18 +1,20 @@
 import React from "react";
+import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import linkStyle from "../styles/link.module.css";
 
 export default function linkWithIcon(props) {
   return (
     <div className="my-2">
-      <a
+      <Link
         href={props.link}
         target="_blank"
         rel="noreferrer"
-        className="hover:text-pink-500"
+        className={linkStyle.link + " p-1"}
       >
-        <FontAwesomeIcon icon={props.icon} size="lg" />
-        <span className="ml-2">{props.name}</span>
-      </a>
+        <FontAwesomeIcon icon={props.icon} className="mr-5" />
+        <span>{props.name}</span>
+      </Link>
     </div>
   );
 }

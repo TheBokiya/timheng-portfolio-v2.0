@@ -1,10 +1,6 @@
 /* import google font */
 @import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;700&display=swap");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 body {
   font-family: "Zilla Slab", serif;
   font-weight: 400;
@@ -20,3 +16,21 @@ h6 {
   font-weight: 900;
   color: theme("colors.navy");
 }
+
+.highlight {
+  background: theme("colors.purple"); /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    theme("colors.teal"),
+    theme("colors.purple")
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    theme("colors.teal"),
+    theme("colors.purple")
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

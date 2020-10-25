@@ -1,0 +1,4 @@
+.link:hover {
+  background-color: theme("colors.lightGrey");
+  border-bottom: solid 2px theme("colors.purple");
+}
