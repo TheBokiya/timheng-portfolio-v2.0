@@ -3,6 +3,7 @@ import Layout from "../components/layout";
 import LinkWithIcon from "../components/linkWithIcon";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faAt } from "@fortawesome/pro-duotone-svg-icons";
+import { Helmet } from "react-helmet";
 
 const contacts = [
   {
@@ -25,6 +26,9 @@ const contacts = [
 export default function Home() {
   return (
     <Layout>
+      <Helmet>
+        <title>Tim Bodyka Heng</title>
+      </Helmet>
       <div className="grid place-content-center">
         <div>
           <h1 className="text-6xl my-10 font-black">

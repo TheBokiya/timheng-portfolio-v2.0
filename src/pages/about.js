@@ -1,9 +1,13 @@
 import React from "react";
 import Layout from "../components/layout";
+import { Helmet } from "react-helmet";
 
 export default function About() {
   return (
     <Layout>
+      <Helmet>
+        <title>Tim Bodyka Heng | About</title>
+      </Helmet>
       <div className="mt-5">
         <h1 className="text-4xl text-purple">Me?</h1>
         <h2 className="text-2xl text-navy">Let me tell you a bit about me.</h2>
