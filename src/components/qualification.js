@@ -11,7 +11,12 @@ export default function Qualification(props) {
       </div>
       <div>
         {props.link ? (
-          <a href={props.link} target="_blank" className={linkStyle.link}>
+          <a
+            href={props.link}
+            target="_blank"
+            className={linkStyle.link}
+            rel="noreferrer"
+          >
             {props.sub}
           </a>
         ) : (
