@@ -19,7 +19,7 @@ const contacts = [
     link: "https://www.linkedin.com/in/timbheng/",
   },
   {
-    name: "hengbodyka[at]gmail[dot]com",
+    name: "hengbodyka [at] gmail [dot] com",
     icon: faAt,
     link: "mailto:hengbodyka@gmail.com?Subject=Hello",
   },

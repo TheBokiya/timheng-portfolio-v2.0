@@ -8,6 +8,8 @@ import {
   faGraduationCap,
   faAward,
 } from "@fortawesome/pro-light-svg-icons";
+import { graphql } from "gatsby";
+import Img from "gatsby-image";
 
 const workExperience = [
   {
@@ -85,7 +87,19 @@ const honours = [
   },
 ];
 
-export default function About() {
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "profile_pic.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
+
+export default function About({ data }) {
   return (
     <Layout>
       <Helmet>
@@ -95,8 +109,11 @@ export default function About() {
         <h1 className="text-4xl font-black">Me?</h1>
         <h2 className="text-2xl text-red">Let me tell you a bit about me.</h2>
       </div>
-      <div className="flex mt-5">
-        <div className="sm:w-3/4">
+      <div className="sm:flex mt-5">
+        <div className="w-full sm:w-2/5 mb-5 sm:mr-5 sm:mb-0">
+          <Img fluid={data.file.childImageSharp.fluid} alt="Profile Picture" />
+        </div>
+        <div className="sm:w-3/5">
           <p className="text-lg">
             As an individual who is intrigued by how people and technology
             intertwine, I have developed interests in UX Design, Visual
@@ -108,7 +125,6 @@ export default function About() {
             a team.
           </p>
         </div>
-        <div className="sm:w-1/4"></div>
       </div>
       <hr className="my-8" />
       <h1 className="text-4xl font-black mb-5">Qualifications</h1>
