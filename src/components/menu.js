@@ -28,12 +28,7 @@ export default function Menu() {
 
   return (
     <div>
-      <div className={"h-3 highlight"}>&nbsp;</div>
-      <header
-        className={
-          menuStyles.container + " bg-gray-500 sm:flex sm:justify-between"
-        }
-      >
+      <header className="bg-gray-500 sm:flex sm:justify-between">
         <div className="flex items-center justify-end p-5">
           <div className="sm:hidden">
             <button
@@ -65,7 +60,7 @@ export default function Menu() {
                 to={item.link}
                 key={index}
                 className={
-                  "block sm:inline-block font-semibold sm:font-thin sm:mx-10 my-5 sm:my-0 text-2xl sm:text-1xl px-2 " +
+                  "block sm:inline-block font-semibold sm:font-thin sm:mx-10 my-5 sm:my-0 text-2xl sm:text-base px-2 uppercase " +
                   menuStyles.navLink
                 }
               >

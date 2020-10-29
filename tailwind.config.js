@@ -6,12 +6,17 @@ module.exports = {
   purge: ["./src/**/*.js", "./src/**/*.jsx", "./src/**/*.ts", "./src/**/*.tsx"],
   theme: {
     colors: {
-      navy: "#14274e",
+      navy: {
+        light: "#0f4c75",
+        default: "#1d2d50",
+      },
+      grey: {
+        dark: "#373a40",
+        light: "#f1f6f9",
+      },
       white: "#f9fcfb",
-      darkGrey: "#373a40",
-      lightGrey: "#f1f6f9",
-      teal: "#49a09d",
-      purple: "#5f2c82",
+      red: "#fc5c7d",
+      blue: "#6a82fb",
     },
     extend: {},
   },

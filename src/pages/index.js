@@ -3,7 +3,9 @@ import Layout from "../components/layout";
 import LinkWithIcon from "../components/linkWithIcon";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faAt } from "@fortawesome/pro-duotone-svg-icons";
+import { faLaptopCode } from "@fortawesome/pro-light-svg-icons";
 import { Helmet } from "react-helmet";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const contacts = [
   {
@@ -32,7 +34,8 @@ export default function Home() {
       <div className="grid place-content-center">
         <div>
           <h1 className="text-6xl my-10 font-black">
-            <span className="text-purple mr-5">&gt;</span>Hello! I&apos;m Tim.
+            <FontAwesomeIcon icon={faLaptopCode} className="mr-5 text-red" />
+            Hello! I&apos;m Tim.
           </h1>
           <div className="lg:w-3/4 text-2xl">
             <p className="text-3xl mb-5">Welcome to my personal portfolio.</p>

@@ -1,12 +1,7 @@
-.container {
-  background-color: theme("colors.lightGrey");
-  color: theme("colors.navy");
-}
-
 .navLink:after {
   display: block;
   content: "";
-  border-bottom: solid 3px theme("colors.purple");
+  border-bottom: solid 3px theme("colors.red");
   transform: scaleX(0);
   transition: transform 250ms ease-in-out;
 }
