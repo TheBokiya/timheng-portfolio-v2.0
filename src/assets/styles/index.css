@@ -1,9 +1,9 @@
 /* import google font */
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Playfair+Display&display=swap");
 
 body {
-  font-family: "Playfair Display", serif;
-  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
   color: theme("colors.white");
   background-color: theme("colors.navy.default");
 }
@@ -14,6 +14,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Playfair Display", serif;
   font-weight: 800;
   color: theme("colors.white");
 }

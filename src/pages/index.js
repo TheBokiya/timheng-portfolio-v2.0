@@ -57,7 +57,7 @@ export default function Home() {
             {contacts.map((item, index) => {
               return (
                 <LinkWithIcon
-                  key={item.name}
+                  key={index}
                   icon={item.icon}
                   name={item.name}
                   link={item.link}
