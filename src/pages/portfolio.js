@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import Layout from "../components/layout";
 import { Helmet } from "react-helmet";
 
@@ -62,11 +63,15 @@ export default function Portfolio() {
       <hr className="my-8" />
       {portfolio.map((i, index) => {
         return (
-          <div>
-            <h3>{i.group}</h3>
+          <div className="mb-10">
+            <h3 className="text-2xl">{i.group}</h3>
             <div className="flex">
               {i.projects.map((j, index) => {
-                <div className="sm:w-1/2">{j.title}</div>;
+                return (
+                  <div className="sm:w-1/2">
+                    <Link to={j.page}>{j.title}</Link>
+                  </div>
+                );
               })}
             </div>
           </div>
