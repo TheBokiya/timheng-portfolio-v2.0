@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/pro-light-svg-icons";
-import menuStyles from "../assets/styles/menu.module.css";
 
 const menuItems = [
   {
@@ -36,6 +35,7 @@ export default function Menu() {
               onClick={() => {
                 setIsOpen(!isOpen);
               }}
+              className="focus:outline-none"
             >
               <FontAwesomeIcon
                 icon={faTimes}
@@ -60,9 +60,9 @@ export default function Menu() {
                 to={item.link}
                 key={index}
                 className={
-                  "block sm:inline-block font-semibold sm:font-thin sm:mx-10 my-5 sm:my-0 text-2xl sm:text-base px-2 uppercase " +
-                  menuStyles.navLink
+                  "block sm:inline-block font-bold sm:mx-10 my-5 sm:my-0 text-4xl sm:text-base px-2 uppercase hover:text-red"
                 }
+                activeClassName="text-red"
               >
                 {item.page}
               </Link>
