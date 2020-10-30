@@ -13,18 +13,21 @@ const portfolio = [
         cover: "ssn/cover.png",
         page: "/portfolio/ssn-website",
       },
-      // {
-      //   title: "Sabay Corporate Website",
-      //   page: "/portfolio/sabay-corp-website",
-      // },
-      // {
-      //   title: "FAM",
-      //   page: "/portfolio/fam",
-      // },
-      // {
-      //   title: "SWAPP",
-      //   page: "/portfolio/swapp",
-      // },
+      {
+        title: "Sabay Corporate Website",
+        cover: "sabay/cover.png",
+        page: "/portfolio/sabay-corp-website",
+      },
+      {
+        title: "FAM",
+        cover: "fam/fam-01.jpg",
+        page: "/portfolio/fam",
+      },
+      {
+        title: "SWAPP",
+        cover: "swapp/swapp-01.png",
+        page: "/portfolio/swapp",
+      },
     ],
   },
   {

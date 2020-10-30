@@ -2,20 +2,31 @@ import React from "react";
 import { Link, StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
-export default function Project(props) {
+function renderImage(props, file) {
+  return (
+    <div className="w-full sm:w-1/2">
+      <Link to={props.page}>
+        <Img fluid={file.node.childImageSharp.fluid} />
+        <div>{props.title}</div>
+      </Link>
+    </div>
+  );
+}
+
+const Project = function (props) {
   return (
     <StaticQuery
       query={graphql`
         query {
           images: allFile(
-            filter: { extension: { regex: "/jpeg|jpg|png|gif/" } }
+            filter: { sourceInstanceName: { eq: "coverImages" } }
           ) {
             edges {
               node {
                 extension
                 relativePath
                 childImageSharp {
-                  fluid(maxWidth: 1000) {
+                  fluid {
                     ...GatsbyImageSharpFluid
                   }
                 }
@@ -24,17 +35,14 @@ export default function Project(props) {
           }
         }
       `}
-      render={({ images }) => (
-        <div>
-          <Img
-            fluid={
-              images.edges.find(
-                image => image.node.relativePath === props.cover
-              ).node.childImageSharp.fluid
-            }
-          />
-        </div>
-      )}
+      render={data => {
+        const image = data.images.edges.find(
+          image => image.node.relativePath === props.cover
+        );
+        return renderImage(props, image);
+      }}
     />
   );
-}
+};
+
+export default Project;
