@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import Layout from "../components/layout";
 import { Helmet } from "react-helmet";
+import Project from "../components/project";
 
 const portfolio = [
   {
@@ -9,31 +10,35 @@ const portfolio = [
     projects: [
       {
         title: "SSN Website",
+        cover: "ssn/cover.png",
         page: "/portfolio/ssn-website",
       },
-      {
-        title: "Sabay Corporate Website",
-      },
-      {
-        title: "FAM",
-      },
-      {
-        title: "SWAPP",
-      },
+      // {
+      //   title: "Sabay Corporate Website",
+      //   page: "/portfolio/sabay-corp-website",
+      // },
+      // {
+      //   title: "FAM",
+      //   page: "/portfolio/fam",
+      // },
+      // {
+      //   title: "SWAPP",
+      //   page: "/portfolio/swapp",
+      // },
     ],
   },
   {
     group: "Visual Analytics",
     projects: [
-      {
-        title: "Exploring User-Definable Graph Layouts",
-      },
-      {
-        title: "Crime, Climate & Population",
-      },
-      {
-        title: "Movie Ratings Viz",
-      },
+      // {
+      //   title: "Exploring User-Definable Graph Layouts",
+      // },
+      // {
+      //   title: "Crime, Climate & Population",
+      // },
+      // {
+      //   title: "Movie Ratings Viz",
+      // },
     ],
   },
 ];
@@ -63,14 +68,17 @@ export default function Portfolio() {
       <hr className="my-8" />
       {portfolio.map((i, index) => {
         return (
-          <div className="mb-10">
+          <div className="mb-10" key={index}>
             <h3 className="text-2xl">{i.group}</h3>
             <div className="flex">
               {i.projects.map((j, index) => {
                 return (
-                  <div className="sm:w-1/2">
-                    <Link to={j.page}>{j.title}</Link>
-                  </div>
+                  <Project
+                    key={index}
+                    page={j.page}
+                    title={j.title}
+                    cover={j.cover}
+                  ></Project>
                 );
               })}
             </div>
