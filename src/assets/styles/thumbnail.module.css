@@ -1,0 +1,13 @@
+.thumbnail {
+  filter: grayscale(100%);
+  -webkit-transition: 0.25s -webkit-filter linear;
+  -moz-transition: 0.25s -moz-filter linear;
+  -moz-transition: 0.25s filter linear;
+  -ms-transition: 0.25s -ms-filter linear;
+  -o-transition: 0.25s -o-filter linear;
+  transition: 0.25s filter linear, 0.25s -webkit-filter linear;
+}
+
+.thumbnail:hover {
+  filter: grayscale(0);
+}

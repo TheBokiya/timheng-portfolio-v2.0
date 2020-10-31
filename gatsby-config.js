@@ -15,7 +15,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `coverImages`,
-        path: `${__dirname}/src/assets/img`,
+        path: `${__dirname}/src/assets/img/thumbnails`,
       },
     },
   ],

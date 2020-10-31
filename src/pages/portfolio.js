@@ -10,23 +10,28 @@ const portfolio = [
     projects: [
       {
         title: "SSN Website",
-        cover: "ssn/cover.png",
+        cover: "ssn-thumbnail.png",
         page: "/portfolio/ssn-website",
       },
       {
         title: "Sabay Corporate Website",
-        cover: "sabay/cover.png",
+        cover: "sabay-thumbnail.png",
         page: "/portfolio/sabay-corp-website",
       },
       {
         title: "FAM",
-        cover: "fam/fam-01.jpg",
+        cover: "fam-thumbnail.png",
         page: "/portfolio/fam",
       },
       {
         title: "SWAPP",
-        cover: "swapp/swapp-01.png",
+        cover: "swapp-thumbnail.png",
         page: "/portfolio/swapp",
+      },
+      {
+        title: "COMMOT",
+        cover: "commot-thumbnail.png",
+        page: "/portfolio/commot",
       },
     ],
   },
@@ -72,8 +77,8 @@ export default function Portfolio() {
       {portfolio.map((i, index) => {
         return (
           <div className="mb-10" key={index}>
-            <h3 className="text-2xl">{i.group}</h3>
-            <div className="flex">
+            <h3 className="text-2xl mb-5">{i.group}</h3>
+            <div className="flex flex-wrap">
               {i.projects.map((j, index) => {
                 return (
                   <Project
