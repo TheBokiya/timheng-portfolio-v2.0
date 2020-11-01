@@ -5,7 +5,7 @@ import thumbnailStyle from "../assets/styles/thumbnail.module.css";
 
 function renderImage(props, file) {
   return (
-    <div className="w-full sm:w-1/3 px-1 my-5">
+    <div className="w-full sm:w-1/2 lg:w-1/3 px-1 my-5">
       <Link to={props.page} className="static">
         <div className="relative">
           <Img

@@ -60,7 +60,7 @@ export default function Menu() {
                 to={item.link}
                 key={index}
                 className={
-                  "block sm:inline-block font-bold sm:mx-10 my-5 sm:my-0 text-4xl sm:text-base px-2 uppercase hover:text-red"
+                  "block sm:inline-block font-bold sm:mx-5 my-5 sm:my-0 text-4xl sm:text-base px-2 uppercase hover:text-red"
                 }
                 activeClassName="text-red"
               >

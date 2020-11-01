@@ -1,8 +1,9 @@
 import React from "react";
-import { Link } from "gatsby";
 import Layout from "../components/layout";
 import { Helmet } from "react-helmet";
 import Project from "../components/project";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlassesAlt } from "@fortawesome/pro-light-svg-icons";
 
 const portfolio = [
   {
@@ -58,7 +59,10 @@ export default function Portfolio() {
         <title>Tim Bodyka Heng | Portfolio</title>
       </Helmet>
       <div className="mt-5">
-        <h1 className="text-4xl font-black mb-5">What I've Done</h1>
+        <h1 className="text-4xl font-black mb-5">
+          <FontAwesomeIcon icon={faGlassesAlt} className="mr-5 text-red" />
+          What I've Done
+        </h1>
         <p>
           As a designer with a programming background, I became a front-end
           developer and have developed interests in ux/ui design, web

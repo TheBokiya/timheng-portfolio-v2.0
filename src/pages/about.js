@@ -7,6 +7,7 @@ import {
   faBriefcase,
   faGraduationCap,
   faAward,
+  faUserGraduate,
 } from "@fortawesome/pro-light-svg-icons";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
@@ -106,14 +107,19 @@ export default function About({ data }) {
         <title>Tim Bodyka Heng | About</title>
       </Helmet>
       <div className="mt-5">
-        <h1 className="text-4xl font-black">Me?</h1>
-        <h2 className="text-2xl text-red">Let me tell you a bit about me.</h2>
+        <h1 className="text-4xl font-black">
+          <FontAwesomeIcon icon={faUserGraduate} className="mr-5 text-red" />
+          Me?
+        </h1>
       </div>
       <div className="sm:flex mt-5">
         <div className="w-full sm:w-2/5 mb-5 sm:mr-5 sm:mb-0">
           <Img fluid={data.file.childImageSharp.fluid} alt="Profile Picture" />
         </div>
         <div className="sm:w-3/5">
+          <h2 className="text-2xl text-red mb-5">
+            Let me tell you a bit about me.
+          </h2>
           <p className="text-lg">
             As an individual who is intrigued by how people and technology
             intertwine, I have developed interests in UX Design, Visual
