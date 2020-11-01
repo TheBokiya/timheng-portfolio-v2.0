@@ -41,6 +41,8 @@ const portfolio = [
     projects: [
       // {
       //   title: "Exploring User-Definable Graph Layouts",
+      //   cover: "udgl-thumbnail.png",
+      //   page: "/portfolio/udgl",
       // },
       // {
       //   title: "Crime, Climate & Population",
