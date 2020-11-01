@@ -5,7 +5,12 @@ import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import LinkWithIcon from "../../components/linkWithIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBrowser } from "@fortawesome/pro-light-svg-icons";
+import {
+  faBrowser,
+  faCode,
+  faToolbox,
+  faBrain,
+} from "@fortawesome/pro-light-svg-icons";
 
 export const query = graphql`
   query {
@@ -19,6 +24,10 @@ export const query = graphql`
   }
 `;
 
+const skillsets = ["Wireframe", "Mockup", "Web Development"];
+const technologies = ["Adobe XD", "Jekyll Framework"];
+const languages = ["Ruby on Rails", "Liquid", "HTML", "SASS", "JS"];
+
 export default function SSNWebsite({ data }) {
   return (
     <Layout>
@@ -27,7 +36,7 @@ export default function SSNWebsite({ data }) {
       </Helmet>
       <h1 className="text-4xl font-black">SSN Website</h1>
       <h3 className="text-2xl text-red">Secure Settlment Network</h3>
-      <div className="my-5 flex">
+      <div className="my-5 sm:flex">
         <div className="w-full sm:w-3/4">
           <Img
             fluid={data.file.childImageSharp.fluid}
@@ -70,7 +79,7 @@ export default function SSNWebsite({ data }) {
           <div className="sm:flex">
             <div className="w-full sm:w-1/2">
               <h3 className="text-2xl mt-5 mb-3">Responsibilities</h3>
-              <ul className="px-3">
+              <ul className="px-3 list-disc">
                 <li>Design the UI of the website</li>
                 <li>Oversee the implementation of the website</li>
                 <li>
@@ -82,7 +91,7 @@ export default function SSNWebsite({ data }) {
             </div>
             <div className="w-full sm:w-1/2">
               <h3 className="text-2xl mt-5 mb-3">Take-Away</h3>
-              <ul className="px-3">
+              <ul className="px-3 list-disc">
                 <li>Able to design the whole website from scratch</li>
                 <li>
                   Able to quickly transform a mockup into a production-ready
@@ -99,37 +108,42 @@ export default function SSNWebsite({ data }) {
             </div>
           </div>
         </div>
-        <div className="hidden sm:block sm:w-1/4 pl-10">
+        <div className="w-full sm:w-1/4 sm:pl-10">
           <div className="border-l-4 border-red px-5 my-10">
-            <h5 className="text-1xl text-red mb-3">Skillset</h5>
+            <FontAwesomeIcon
+              icon={faBrain}
+              className="text-red mb-3 text-2xl"
+            />
             <ul>
-              <li>Wireframe</li>
-              <li>Mockup</li>
-              <li>Web Development</li>
+              {skillsets.map(skill => (
+                <li>{skill}</li>
+              ))}
             </ul>
           </div>
           <div className="border-l-4 border-red px-5 my-10">
-            <h5 className="text-1xl text-red mb-3">Skillset</h5>
+            <FontAwesomeIcon
+              icon={faToolbox}
+              className="text-red mb-3 text-2xl"
+            />
             <ul>
-              <li>Technology</li>
-              <li>Adobe XD</li>
-              <li>Jekyll Framework</li>
+              {technologies.map(tech => (
+                <li>{tech}</li>
+              ))}
             </ul>
           </div>
           <div className="border-l-4 border-red px-5 my-10">
-            <h5 className="text-1xl text-red mb-3">Language</h5>
+            <FontAwesomeIcon icon={faCode} className="text-red mb-3 text-2xl" />
             <ul>
-              <li>Ruby on Rails</li>
-              <li>Liquid</li>
-              <li>HTML</li>
-              <li>SASS</li>
-              <li>JS</li>
+              {languages.map(lang => (
+                <li>{lang}</li>
+              ))}
             </ul>
           </div>
           <LinkWithIcon
             icon={faBrowser}
             link="https://ssn.digital/"
             name="Visit Live Site"
+            className="inline-block justify-items-end"
           ></LinkWithIcon>
         </div>
       </div>
