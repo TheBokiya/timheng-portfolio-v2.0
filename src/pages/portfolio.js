@@ -49,9 +49,26 @@ const portfolio = [
         cover: "ccp-thumbnail.png",
         page: "/portfolio/crime-climate-population",
       },
-      // {
-      //   title: "Movie Ratings Viz",
-      // },
+      {
+        title: "Movie Ratings Viz",
+        cover: "movie-ratings-thumbnail.png",
+        page: "/portfolio/movie-ratings",
+      },
+    ],
+  },
+  {
+    group: "Design",
+    projects: [
+      {
+        title: "Project MOMO",
+        cover: "momo-thumbnail.png",
+        page: "/portfolio/project-momo",
+      },
+      {
+        title: "Science World Evaluation",
+        cover: "science-world-thumbnail.png",
+        page: "portfolio/science-world",
+      },
     ],
   },
 ];
@@ -60,7 +77,7 @@ export default function Portfolio() {
   return (
     <Layout>
       <Helmet>
-        <title>Tim Bodyka Heng | Portfolio</title>
+        <title>Portfolio</title>
       </Helmet>
       <div className="mt-5">
         <h1 className="text-4xl font-black mb-5">

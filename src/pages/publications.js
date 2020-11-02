@@ -49,7 +49,7 @@ export default function Publications() {
   return (
     <Layout>
       <Helmet>
-        <title>Tim Bodyka Heng | Publications</title>
+        <title>Publications</title>
       </Helmet>
       <div className="mt-5">
         <h1 className="text-4xl font-black">

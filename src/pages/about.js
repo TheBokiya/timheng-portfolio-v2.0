@@ -104,7 +104,7 @@ export default function About({ data }) {
   return (
     <Layout>
       <Helmet>
-        <title>Tim Bodyka Heng | About</title>
+        <title>About</title>
       </Helmet>
       <div className="mt-5">
         <h1 className="text-4xl font-black">
