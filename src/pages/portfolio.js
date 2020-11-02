@@ -39,14 +39,16 @@ const portfolio = [
   {
     group: "Visual Analytics",
     projects: [
-      // {
-      //   title: "Exploring User-Definable Graph Layouts",
-      //   cover: "udgl-thumbnail.png",
-      //   page: "/portfolio/udgl",
-      // },
-      // {
-      //   title: "Crime, Climate & Population",
-      // },
+      {
+        title: "Exploring User-Definable Graph Layouts",
+        cover: "udgl-thumbnail.png",
+        page: "/portfolio/udgl",
+      },
+      {
+        title: "Crime, Climate & Population",
+        cover: "ccp-thumbnail.png",
+        page: "/portfolio/crime-climate-population",
+      },
       // {
       //   title: "Movie Ratings Viz",
       // },
