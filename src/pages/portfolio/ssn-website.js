@@ -11,6 +11,8 @@ import {
   faToolbox,
   faBrain,
 } from "@fortawesome/pro-light-svg-icons";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 
 export const query = graphql`
   query {
@@ -24,9 +26,23 @@ export const query = graphql`
   }
 `;
 
-const skillsets = ["Wireframe", "Mockup", "Web Development"];
-const technologies = ["Adobe XD", "Jekyll Framework"];
-const languages = ["Ruby on Rails", "Liquid", "HTML", "SASS", "JS"];
+const sideInfo = [
+  {
+    group: "Skillsets",
+    icon: faBrain,
+    nodes: ["Wireframe", "Mockup", "Web Development"],
+  },
+  {
+    group: "Technologies",
+    icon: faToolbox,
+    nodes: ["Adobe XD", "Jekyll Framework"],
+  },
+  {
+    group: "Languages",
+    icon: faCode,
+    nodes: ["Ruby on Rails", "Liquid", "HTML", "SASS", "JS"],
+  },
+];
 
 export default function SSNWebsite({ data }) {
   return (
@@ -108,37 +124,20 @@ export default function SSNWebsite({ data }) {
             </div>
           </div>
         </div>
-        <div className="w-full sm:w-1/4 sm:pl-10">
-          <div className="border-l-4 border-red px-5 my-10">
-            <FontAwesomeIcon
-              icon={faBrain}
-              className="text-red mb-3 text-2xl"
-            />
-            <ul>
-              {skillsets.map(skill => (
-                <li>{skill}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="border-l-4 border-red px-5 my-10">
-            <FontAwesomeIcon
-              icon={faToolbox}
-              className="text-red mb-3 text-2xl"
-            />
-            <ul>
-              {technologies.map(tech => (
-                <li>{tech}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="border-l-4 border-red px-5 my-10">
-            <FontAwesomeIcon icon={faCode} className="text-red mb-3 text-2xl" />
-            <ul>
-              {languages.map(lang => (
-                <li>{lang}</li>
-              ))}
-            </ul>
-          </div>
+        <div className="hidden sm:block sm:w-1/4 sm:pl-10">
+          {sideInfo.map(i => (
+            <div className="border-l-4 border-red px-5 my-10">
+              <FontAwesomeIcon
+                icon={i.icon}
+                className="text-red mb-3 text-2xl"
+              />
+              <ul>
+                {i.nodes.map(j => (
+                  <li>{j}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
           <LinkWithIcon
             icon={faBrowser}
             link="https://ssn.digital/"
@@ -147,6 +146,25 @@ export default function SSNWebsite({ data }) {
           ></LinkWithIcon>
         </div>
       </div>
+      <Tabs className="block sm:hidden">
+        <TabList>
+          {sideInfo.map(i => (
+            <Tab>
+              <FontAwesomeIcon icon={i.icon} className="text-red text-2xl" />
+            </Tab>
+          ))}
+        </TabList>
+
+        {sideInfo.map(i => (
+          <TabPanel>
+            <ul>
+              {i.nodes.map(j => (
+                <li>{j}</li>
+              ))}
+            </ul>
+          </TabPanel>
+        ))}
+      </Tabs>
     </Layout>
   );
 }
