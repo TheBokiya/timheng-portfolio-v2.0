@@ -28,7 +28,7 @@ p {
 }
 
 .react-tabs__tab-list {
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid theme("colors.red");
   margin: 0 0 10px;
   padding: 0;
 }
@@ -45,10 +45,14 @@ p {
 }
 
 .react-tabs__tab--selected {
-  background: #fff;
-  border-color: #aaa;
-  color: black;
-  border-radius: 5px 5px 0 0;
+  background: theme("colors.red");
+  border-color: theme("colors.red");
+  color: theme("colors.white");
+  border-radius: 0;
+}
+
+.react-tabs__tab--selected > svg {
+  color: theme("colors.white");
 }
 
 .react-tabs__tab--disabled {
@@ -69,7 +73,7 @@ p {
   left: -4px;
   right: -4px;
   bottom: -5px;
-  background: #fff;
+  background: theme("colors.red");
 }
 
 .react-tabs__tab-panel {

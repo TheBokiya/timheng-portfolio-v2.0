@@ -12,7 +12,7 @@ import {
   faBrain,
 } from "@fortawesome/pro-light-svg-icons";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import "react-tabs/style/react-tabs.css";
+// import "react-tabs/style/react-tabs.css";
 
 export const query = graphql`
   query {
@@ -43,6 +43,8 @@ const sideInfo = [
     nodes: ["Ruby on Rails", "Liquid", "HTML", "SASS", "JS"],
   },
 ];
+
+const liveSite = "https://ssn.digital/";
 
 export default function SSNWebsite({ data }) {
   return (
@@ -140,13 +142,13 @@ export default function SSNWebsite({ data }) {
           ))}
           <LinkWithIcon
             icon={faBrowser}
-            link="https://ssn.digital/"
+            link={liveSite}
             name="Visit Live Site"
             className="inline-block justify-items-end"
           ></LinkWithIcon>
         </div>
       </div>
-      <Tabs className="block sm:hidden">
+      <Tabs className="block sm:hidden my-10">
         <TabList>
           {sideInfo.map(i => (
             <Tab>
@@ -157,6 +159,7 @@ export default function SSNWebsite({ data }) {
 
         {sideInfo.map(i => (
           <TabPanel>
+            <h3 className="mb-5">{i.group}</h3>
             <ul>
               {i.nodes.map(j => (
                 <li>{j}</li>
@@ -165,6 +168,13 @@ export default function SSNWebsite({ data }) {
           </TabPanel>
         ))}
       </Tabs>
+      <div className="flex sm:hidden justify-end">
+        <LinkWithIcon
+          icon={faBrowser}
+          link={liveSite}
+          name="Visit Live Site"
+        ></LinkWithIcon>
+      </div>
     </Layout>
   );
 }
