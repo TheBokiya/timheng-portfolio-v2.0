@@ -3,6 +3,7 @@ import Layout from "../../components/layout";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
+import LinkWithIcon from "../../components/linkWithIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBrowser,
@@ -33,12 +34,12 @@ const sideInfo = [
   {
     group: "Technologies",
     icon: faToolbox,
-    node: ["Jekyll Framework"],
+    nodes: ["Jekyll Framework"],
   },
   {
     group: "Languages",
     icon: faCode,
-    node: ["Ruby on Rails", "Liquid", "HTML", "SASS", "JS"],
+    nodes: ["Ruby on Rails", "Liquid", "HTML", "SASS", "JS"],
   },
 ];
 
@@ -110,6 +111,35 @@ export default function SabayWebsite({ data }) {
             </div>
           </div>
         </div>
+        <div className="hidden sm:block sm:w-1/4 sm:pl-10">
+          {sideInfo.map(i => (
+            <div className="border-l-4 border-red px-5 my-10">
+              <FontAwesomeIcon
+                icon={i.icon}
+                className="text-red mb-3 text-2xl"
+              />
+              <ul>
+                {i.nodes.map(j => (
+                  <li>{j}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+          <LinkWithIcon
+            icon={faBrowser}
+            link={liveSite}
+            name="Visit Live Site"
+            className="inline-block justify-items-end"
+          ></LinkWithIcon>
+        </div>
+      </div>
+      <TabsForMobile list={sideInfo}></TabsForMobile>
+      <div className="flex sm:hidden justify-end">
+        <LinkWithIcon
+          icon={faBrowser}
+          link={liveSite}
+          name="Visit Live Site"
+        ></LinkWithIcon>
       </div>
     </Layout>
   );
