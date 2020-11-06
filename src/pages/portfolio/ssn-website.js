@@ -11,8 +11,7 @@ import {
   faToolbox,
   faBrain,
 } from "@fortawesome/pro-light-svg-icons";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-// import "react-tabs/style/react-tabs.css";
+import TabsForMobile from "../../components/tabsForMobile";
 
 export const query = graphql`
   query {
@@ -28,7 +27,7 @@ export const query = graphql`
 
 const sideInfo = [
   {
-    group: "Skillsets",
+    group: "Skillset",
     icon: faBrain,
     nodes: ["Wireframe", "Mockup", "Web Development"],
   },
@@ -50,7 +49,7 @@ export default function SSNWebsite({ data }) {
   return (
     <Layout>
       <Helmet>
-        <title>Tim Bodyka Heng | Portfolio</title>
+        <title>SSN Website</title>
       </Helmet>
       <h1 className="text-4xl font-black">SSN Website</h1>
       <h3 className="text-2xl text-red">Secure Settlment Network</h3>
@@ -148,26 +147,7 @@ export default function SSNWebsite({ data }) {
           ></LinkWithIcon>
         </div>
       </div>
-      <Tabs className="block sm:hidden my-10">
-        <TabList>
-          {sideInfo.map(i => (
-            <Tab>
-              <FontAwesomeIcon icon={i.icon} className="text-red text-2xl" />
-            </Tab>
-          ))}
-        </TabList>
-
-        {sideInfo.map(i => (
-          <TabPanel>
-            <h3 className="mb-5">{i.group}</h3>
-            <ul>
-              {i.nodes.map(j => (
-                <li>{j}</li>
-              ))}
-            </ul>
-          </TabPanel>
-        ))}
-      </Tabs>
+      <TabsForMobile list={sideInfo}></TabsForMobile>
       <div className="flex sm:hidden justify-end">
         <LinkWithIcon
           icon={faBrowser}

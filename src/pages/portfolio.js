@@ -17,7 +17,7 @@ const portfolio = [
       {
         title: "Sabay Corporate Website",
         cover: "sabay-thumbnail.png",
-        page: "/portfolio/sabay-corp-website",
+        page: "/portfolio/sabay-website",
       },
       {
         title: "FAM",
