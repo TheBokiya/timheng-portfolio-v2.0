@@ -67,7 +67,7 @@ const portfolio = [
       {
         title: "Science World Evaluation",
         cover: "science-world-thumbnail.png",
-        page: "portfolio/science-world",
+        page: "/portfolio/science-world",
       },
     ],
   },
