@@ -5,13 +5,9 @@ import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import LinkWithIcon from "../../components/linkWithIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBrowser,
-  faCode,
-  faToolbox,
-  faBrain,
-} from "@fortawesome/pro-light-svg-icons";
+import { faFilePdf, faBrain } from "@fortawesome/pro-light-svg-icons";
 import TabsForMobile from "../../components/tabsForMobile";
+import pdfFile from "../../assets/files/scienceworld_report.pdf";
 
 export const query = graphql`
   query {
@@ -33,7 +29,17 @@ const sideInfo = [
   },
 ];
 
-const liveSite = "https://ssn.digital/";
+const responsibilities = [
+  "Performing heuristic evaluation with other experts on the team",
+  "Performing task analysis",
+  "Co-author the final report",
+];
+
+const outcome = [
+  "Able to perform heuristic evaluation and task analysis to help identifying usability issues with the UI",
+  "Able to pick out and prioritize important tasks to be analyzed",
+  "Able to deliver a report that highlights usability issues along with suggested improvements",
+];
 
 export default function SSNWebsite({ data }) {
   return (
@@ -67,6 +73,25 @@ export default function SSNWebsite({ data }) {
             suggested improvements that we believe we help solving those
             usability problems. The report was later submitted to Science World.
           </p>
+          <hr className="my-5" />
+          <div className="sm:flex">
+            <div className="w-full sm:w-1/2">
+              <h3 className="text-2xl mt-5 mb-3">Responsibilities</h3>
+              <ul className="px-3 list-disc">
+                {responsibilities.map(i => (
+                  <li>{i}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="w-full sm:w-1/2">
+              <h3 className="text-2xl mt-5 mb-3">Outcome</h3>
+              <ul className="px-3 list-disc">
+                {outcome.map(i => (
+                  <li>{i}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
         <div className="hidden sm:block sm:w-1/4 sm:pl-10">
           {sideInfo.map(i => (
@@ -83,9 +108,9 @@ export default function SSNWebsite({ data }) {
             </div>
           ))}
           <LinkWithIcon
-            icon={faBrowser}
-            link={liveSite}
-            name="Visit Live Site"
+            icon={faFilePdf}
+            link={pdfFile}
+            name="Download PDF"
             className="inline-block justify-items-end"
           ></LinkWithIcon>
         </div>
@@ -93,9 +118,9 @@ export default function SSNWebsite({ data }) {
       <TabsForMobile list={sideInfo}></TabsForMobile>
       <div className="flex sm:hidden justify-end">
         <LinkWithIcon
-          icon={faBrowser}
-          link={liveSite}
-          name="Visit Live Site"
+          icon={faFilePdf}
+          link={pdfFile}
+          name="Download PDF"
         ></LinkWithIcon>
       </div>
     </Layout>
