@@ -43,6 +43,20 @@ const sideInfo = [
   },
 ];
 
+const responsibilities = [
+  "Design the UI of the website",
+  "Oversee the implementation of the website",
+  "Work with the creative team to request for suitable illustrations",
+  "Maintain and update the website as required",
+];
+
+const takeAway = [
+  "Able to design the whole website from scratch",
+  "Able to quickly transform a mockup into a production-ready product",
+  "Able to lead and oversee the whole development of a website",
+  "Able to work with different teams to make sure that the project stayed on track and completed on time",
+];
+
 const liveSite = "https://ssn.digital/";
 
 export default function SSNWebsite({ data }) {
@@ -97,30 +111,17 @@ export default function SSNWebsite({ data }) {
             <div className="w-full sm:w-1/2">
               <h3 className="text-2xl mt-5 mb-3">Responsibilities</h3>
               <ul className="px-3 list-disc">
-                <li>Design the UI of the website</li>
-                <li>Oversee the implementation of the website</li>
-                <li>
-                  Work with the creative team to request for suitable
-                  illustrations
-                </li>
-                <li>Maintain and update the website as required</li>
+                {responsibilities.map(i => (
+                  <li>{i}</li>
+                ))}
               </ul>
             </div>
             <div className="w-full sm:w-1/2">
               <h3 className="text-2xl mt-5 mb-3">Take-Away</h3>
               <ul className="px-3 list-disc">
-                <li>Able to design the whole website from scratch</li>
-                <li>
-                  Able to quickly transform a mockup into a production-ready
-                  product
-                </li>
-                <li>
-                  Able to lead and oversee the whole development of a website
-                </li>
-                <li>
-                  Able to work with different teams to make sure that the
-                  project stayed on track and completed on time
-                </li>
+                {takeAway.map(i => (
+                  <li>{i}</li>
+                ))}
               </ul>
             </div>
           </div>

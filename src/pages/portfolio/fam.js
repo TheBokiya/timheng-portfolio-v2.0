@@ -15,7 +15,7 @@ import TabsForMobile from "../../components/tabsForMobile";
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "sabay/cover.png" }) {
+    file(relativePath: { eq: "fam/fam-01.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
@@ -44,15 +44,18 @@ const sideInfo = [
 ];
 
 const responsibilities = [
-  "Work with another lead designer to design the website",
-  "Offer my knowledge and expertise ui/ux design during the conceptualization phase",
-  "Oversee the website development by delegating work to a web developer",
+  "Researching and brainstorming ideas",
+  "wireframing and designing UI mockups",
+  "Implementing photo gallery feature with FTP",
+  "Implementing image storage solution",
+  "Implementing app widget",
 ];
 
 const outcome = [
-  "Able to work with another designer to design and implement the website",
-  "Able to lead a small team to develop a relatively content-heavy website",
-  "Able to work with various stakeholders to come up with new content for the website",
+  "Able to brainstorm, design and build an android app from scratch",
+  "Able to do research and look for different approaches to solve a problem",
+  "Able to do research and look for different approaches to solve a problem",
+  "Able to work in small team to create a medium size project",
 ];
 
 const liveSite = "https://sabay.com/";
@@ -61,32 +64,35 @@ export default function SabayWebsite({ data }) {
   return (
     <Layout>
       <Helmet>
-        <title>Sabay Website</title>
+        <title>FAM</title>
       </Helmet>
-      <h1 className="text-4xl font-black">Sabay Website</h1>
-      <h3 className="text-2xl text-red">a new coporate website</h3>
+      <h1 className="text-4xl font-black">FAM</h1>
+      <h3 className="text-2xl text-red">a social-media app for family</h3>
       <div className="my-5 sm:flex">
         <div className="w-full sm:w-3/4">
-          <Img
-            fluid={data.file.childImageSharp.fluid}
-            alt="sabay-cover"
-            className="mb-5"
-          />
+          <iframe
+            width="800"
+            height="500"
+            src="https://www.youtube.com/embed/sptYrJaehKo"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            className="w-full"
+          ></iframe>
           <p>
-            In late 2019, Sabay were looking to redesign their corporate website
-            as it was, at that time, outdated and did not reflect the value and
-            the company very well. I was assigned as a Development Lead to
-            oversee the development of the website.
-          </p>
-          <p>
-            In this project, I worked with a Lead Designer who designed the
-            majority of the new Sabay website.
-          </p>
-          <h3 className="text-2xl mt-5 mb-3">Development</h3>
-          <p>
-            For this project, we decided to use Jekyll framework which was built
-            using Ruby. We decided to use Jekyll because this corporate website
-            is a simple static website with very few pages.
+            Fam is an android application that is made for an Android
+            application development class. It's a utility app that helps
+            connecting members of busy families through out the day. It is a
+            central hub for family communication, allowing family members to
+            stay up-to-date with one another without having to open multiple
+            applications and social networking sites. Connect calendars to
+            coordinate schedules, post messages to a central board, swipe
+            gestures for immediate one-touch notifications, share photos,
+            organize check lists, and constantly remain aware of each other’s
+            whereabouts. Simple, quick, and intuitive. Fam’s comprehensive list
+            of communication tools and utilities ensures families stay
+            organized, updated, and most importantly, connected to one another.
+            Fam is an app built by me with a partner.
           </p>
           <hr className="my-5" />
           <div className="sm:flex">
@@ -99,7 +105,7 @@ export default function SabayWebsite({ data }) {
               </ul>
             </div>
             <div className="w-full sm:w-1/2">
-              <h3 className="text-2xl mt-5 mb-3">Outcome</h3>
+              <h3 className="text-2xl mt-5 mb-3">Take-Away</h3>
               <ul className="px-3 list-disc">
                 {outcome.map(i => (
                   <li>{i}</li>
@@ -107,6 +113,16 @@ export default function SabayWebsite({ data }) {
               </ul>
             </div>
           </div>
+          <hr className="my-5" />
+          {/* {data.file.map(item, index => {
+            return (
+              <Img
+                fluid={item.childImageSharp.fluid}
+                alt={"fam-" + index}
+              ></Img>
+            );
+          })} */}
+          <Img fluid={data.file.childImageSharp.fluid} alt="Profile Picture" />
         </div>
         <div className="hidden sm:block sm:w-1/4 sm:pl-10">
           {sideInfo.map(i => (
