@@ -42,7 +42,7 @@ const sideInfo = [
   {
     group: "Technologies",
     icon: faToolbox,
-    nodes: ["Java", "JavaFX"],
+    nodes: ["Arduino", "Java"],
   },
 ];
 
