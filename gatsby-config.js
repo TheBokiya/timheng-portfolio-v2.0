@@ -18,26 +18,5 @@ module.exports = {
         path: `${__dirname}/src/assets/img`,
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `coverImages`,
-    //     path: `${__dirname}/src/assets/img/thumbnails`,
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `famImages`,
-    //     path: `${__dirname}/src/assets/img/fam`,
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `sabayWebsiteImages`,
-    //     path: `${__dirname}/src/assets/img/sabay`,
-    //   },
-    // },
   ],
 };
