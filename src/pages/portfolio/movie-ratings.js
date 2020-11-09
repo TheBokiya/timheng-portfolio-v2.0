@@ -5,7 +5,12 @@ import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import LinkWithIcon from "../../components/linkWithIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBrowser, faToolbox } from "@fortawesome/pro-light-svg-icons";
+import {
+  faBrowser,
+  faCode,
+  faToolbox,
+  faBrain,
+} from "@fortawesome/pro-light-svg-icons";
 import TabsForMobile from "../../components/tabsForMobile";
 
 export const query = graphql`
@@ -13,12 +18,15 @@ export const query = graphql`
     allFile(
       filter: {
         sourceInstanceName: { eq: "images" }
-        relativeDirectory: { eq: "fam" }
+        relativeDirectory: { eq: "movie_ratings" }
       }
       sort: { fields: childImageSharp___fluid___originalName }
     ) {
       edges {
         node {
+          relativePath
+          extension
+          publicURL
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
@@ -34,68 +42,47 @@ const sideInfo = [
   {
     group: "Technologies",
     icon: faToolbox,
-    nodes: [
-      "Java",
-      "XML",
-      "Android SDK",
-      "MySQL",
-      "Apache Commons",
-      "Adobe Illustrator",
-      "Adobe Photoshop",
-    ],
+    nodes: ["Java", "JavaFX"],
   },
 ];
 
 const responsibilities = [
-  "Researching and brainstorming ideas",
-  "Wireframing and designing UI mockups",
-  "Implementing photo gallery feature with FTP",
-  "Implementing image storage solution",
-  "Implementing app widget",
+  "Researching for appropriate data and toolset to be used for the project",
+  "Developing the prototype",
 ];
 
 const outcome = [
-  "Able to brainstorm, design and build an android app from scratch",
-  "Able to do research and look for different approaches to solve a problem",
-  "Able to do research and look for different approaches to solve a problem",
-  "Able to work in small team to create a medium size project",
+  "Able to understand and combine csv data with javafx to create a visualization",
 ];
 
-const liveSite = "https://sabay.com/";
+const liveSite = "https://github.com/TheBokiya/MovieProject";
 
-export default function Fam({ data }) {
+export default function MovieRatings({ data }) {
   return (
     <Layout>
       <Helmet>
-        <title>FAM</title>
+        <title>Movie Ratings</title>
       </Helmet>
-      <h1 className="text-4xl font-black">FAM</h1>
-      <h3 className="text-2xl text-red">a social-media app for family</h3>
+      <h1 className="text-4xl font-black">Movie Ratings</h1>
+      <h3 className="text-2xl text-red">experimental work</h3>
       <div className="my-5 sm:flex">
         <div className="w-full sm:w-3/4">
           <iframe
             width="800"
             height="500"
-            src="https://www.youtube.com/embed/sptYrJaehKo"
+            src="https://www.youtube.com/embed/SfwQsnqXVQ4"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             className="w-full"
           ></iframe>
           <p>
-            Fam is an android application that is made for an Android
-            application development class. It's a utility app that helps
-            connecting members of busy families through out the day. It is a
-            central hub for family communication, allowing family members to
-            stay up-to-date with one another without having to open multiple
-            applications and social networking sites. Connect calendars to
-            coordinate schedules, post messages to a central board, swipe
-            gestures for immediate one-touch notifications, share photos,
-            organize check lists, and constantly remain aware of each other’s
-            whereabouts. Simple, quick, and intuitive. Fam’s comprehensive list
-            of communication tools and utilities ensures families stay
-            organized, updated, and most importantly, connected to one another.
-            Fam is an app built by me with a partner.
+            This is a personal project that I've worked on. The objective of
+            this project is to allow myself to explore and experiment what can
+            be done by combining JavaFX and CSV data. This page will not be the
+            same as other portfolio project pages on this site as I want this to
+            be a project showcase and a blog post about the project, because why
+            not?
           </p>
           <hr className="my-5" />
           <div className="sm:flex">
@@ -118,13 +105,23 @@ export default function Fam({ data }) {
           </div>
           <hr className="my-5" />
           {data.allFile.edges.map((item, index) => {
-            return (
-              <Img
-                fluid={item.node.childImageSharp.fluid}
-                key={index}
-                className="my-5"
-              />
-            );
+            if (item.node.extension == "gif") {
+              return (
+                <img
+                  src={item.node.publicURL}
+                  key={index}
+                  className="my-5 w-full"
+                />
+              );
+            } else {
+              return (
+                <Img
+                  fluid={item.node.childImageSharp.fluid}
+                  key={index}
+                  className="my-5"
+                />
+              );
+            }
           })}
         </div>
         <div className="hidden sm:block sm:w-1/4 sm:pl-10">
