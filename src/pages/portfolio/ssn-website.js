@@ -15,13 +15,15 @@ import TabsForMobile from "../../components/tabsForMobile";
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "assets/img/sabay/cover.png" }) {
+    file(
+      relativeDirectory: { eq: "ssn" }
+      sourceInstanceName: { eq: "images" }
+    ) {
       childImageSharp {
         fluid {
-          base64
+          ...GatsbyImageSharpFluid
         }
       }
-      sourceInstanceName
     }
   }
 `;
@@ -112,31 +114,34 @@ export default function SSNWebsite({ data }) {
             <div className="w-full sm:w-1/2">
               <h3 className="text-2xl mt-5 mb-3">Responsibilities</h3>
               <ul className="px-3 list-disc">
-                {responsibilities.map(i => (
-                  <li>{i}</li>
+                {responsibilities.map((i, index) => (
+                  <li key={index}>{i}</li>
                 ))}
               </ul>
             </div>
             <div className="w-full sm:w-1/2">
               <h3 className="text-2xl mt-5 mb-3">Take-Away</h3>
               <ul className="px-3 list-disc">
-                {takeAway.map(i => (
-                  <li>{i}</li>
+                {takeAway.map((i, index) => (
+                  <li key={index}>{i}</li>
                 ))}
               </ul>
             </div>
           </div>
         </div>
         <div className="hidden sm:block sm:w-1/4 sm:pl-10">
-          {sideInfo.map(i => (
-            <div className="border-l-4 border-red px-5 my-10">
+          {sideInfo.map((i, iIndex) => (
+            <div
+              className="border-l-4 border-red px-5 my-10"
+              key={"sideInfoGroup-" + iIndex}
+            >
               <FontAwesomeIcon
                 icon={i.icon}
                 className="text-red mb-3 text-2xl"
               />
               <ul>
-                {i.nodes.map(j => (
-                  <li>{j}</li>
+                {i.nodes.map((j, jIndex) => (
+                  <li key={"sideInfoContent-" + jIndex}>{j}</li>
                 ))}
               </ul>
             </div>

@@ -71,7 +71,6 @@ const outcome = [
 const liveSite = "https://sabay.com/";
 
 export default function Fam({ data }) {
-  console.log(data.allFile.edges);
   return (
     <Layout>
       <Helmet>
@@ -85,9 +84,9 @@ export default function Fam({ data }) {
             width="800"
             height="500"
             src="https://www.youtube.com/embed/sptYrJaehKo"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
             className="w-full"
           ></iframe>
           <p>
@@ -110,16 +109,16 @@ export default function Fam({ data }) {
             <div className="w-full sm:w-1/2">
               <h3 className="text-2xl mt-5 mb-3">Responsibilities</h3>
               <ul className="px-3 list-disc">
-                {responsibilities.map(i => (
-                  <li>{i}</li>
+                {responsibilities.map((i, index) => (
+                  <li key={index}>{i}</li>
                 ))}
               </ul>
             </div>
             <div className="w-full sm:w-1/2">
               <h3 className="text-2xl mt-5 mb-3">Take-Away</h3>
               <ul className="px-3 list-disc">
-                {outcome.map(i => (
-                  <li>{i}</li>
+                {outcome.map((i, index) => (
+                  <li key={index}>{i}</li>
                 ))}
               </ul>
             </div>
