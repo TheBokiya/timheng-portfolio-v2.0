@@ -15,10 +15,14 @@ import TabsForMobile from "../../components/tabsForMobile";
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "fam/fam-01.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+    allFile(filter: { sourceInstanceName: { eq: "famImages" } }) {
+      edges {
+        node {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     }
@@ -45,7 +49,7 @@ const sideInfo = [
 
 const responsibilities = [
   "Researching and brainstorming ideas",
-  "wireframing and designing UI mockups",
+  "Wireframing and designing UI mockups",
   "Implementing photo gallery feature with FTP",
   "Implementing image storage solution",
   "Implementing app widget",
@@ -61,6 +65,7 @@ const outcome = [
 const liveSite = "https://sabay.com/";
 
 export default function SabayWebsite({ data }) {
+  console.log(data.allFiles);
   return (
     <Layout>
       <Helmet>
@@ -114,15 +119,10 @@ export default function SabayWebsite({ data }) {
             </div>
           </div>
           <hr className="my-5" />
-          {/* {data.file.map(item, index => {
-            return (
-              <Img
-                fluid={item.childImageSharp.fluid}
-                alt={"fam-" + index}
-              ></Img>
-            );
-          })} */}
-          <Img fluid={data.file.childImageSharp.fluid} alt="Profile Picture" />
+          {data.allFiles.edges.map(edge => (
+            <Img fluid={edge.node.fluid} />
+          ))}
+          {/* <Img fluid={data.file.childImageSharp.fluid} alt="Profile Picture" /> */}
         </div>
         <div className="hidden sm:block sm:w-1/4 sm:pl-10">
           {sideInfo.map(i => (
