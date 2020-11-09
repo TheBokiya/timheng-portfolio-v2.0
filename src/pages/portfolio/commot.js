@@ -60,6 +60,7 @@ export default function SSNWebsite({ data }) {
           icon={faBrowser}
           link={liveSite}
           name="Visit Live Site"
+          type="external"
         ></LinkWithIcon>
       </div>
     </Layout>

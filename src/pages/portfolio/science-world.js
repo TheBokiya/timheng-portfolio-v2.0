@@ -112,6 +112,7 @@ export default function SSNWebsite({ data }) {
             link={pdfFile}
             name="Download PDF"
             className="inline-block justify-items-end"
+            type="internal"
           ></LinkWithIcon>
         </div>
       </div>
@@ -121,6 +122,7 @@ export default function SSNWebsite({ data }) {
           icon={faFilePdf}
           link={pdfFile}
           name="Download PDF"
+          type="internal"
         ></LinkWithIcon>
       </div>
     </Layout>

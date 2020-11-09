@@ -15,12 +15,13 @@ import TabsForMobile from "../../components/tabsForMobile";
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "ssn/cover.png" }) {
+    file(relativePath: { eq: "assets/img/sabay/cover.png" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid
+          base64
         }
       }
+      sourceInstanceName
     }
   }
 `;
@@ -145,6 +146,7 @@ export default function SSNWebsite({ data }) {
             link={liveSite}
             name="Visit Live Site"
             className="inline-block justify-items-end"
+            type="external"
           ></LinkWithIcon>
         </div>
       </div>
@@ -154,6 +156,7 @@ export default function SSNWebsite({ data }) {
           icon={faBrowser}
           link={liveSite}
           name="Visit Live Site"
+          type="external"
         ></LinkWithIcon>
       </div>
     </Layout>

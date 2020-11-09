@@ -61,6 +61,7 @@ export default function Home() {
                   icon={item.icon}
                   name={item.name}
                   link={item.link}
+                  type="external"
                 ></LinkWithIcon>
               );
             })}

@@ -15,7 +15,13 @@ import TabsForMobile from "../../components/tabsForMobile";
 
 export const query = graphql`
   query {
-    allFile(filter: { sourceInstanceName: { eq: "famImages" } }) {
+    allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        relativeDirectory: { eq: "fam" }
+      }
+      sort: { fields: childImageSharp___fluid___originalName }
+    ) {
       edges {
         node {
           childImageSharp {
@@ -64,8 +70,8 @@ const outcome = [
 
 const liveSite = "https://sabay.com/";
 
-export default function SabayWebsite({ data }) {
-  console.log(data.allFiles);
+export default function Fam({ data }) {
+  console.log(data.allFile.edges);
   return (
     <Layout>
       <Helmet>
@@ -119,21 +125,29 @@ export default function SabayWebsite({ data }) {
             </div>
           </div>
           <hr className="my-5" />
-          {data.allFiles.edges.map(edge => (
-            <Img fluid={edge.node.fluid} />
-          ))}
-          {/* <Img fluid={data.file.childImageSharp.fluid} alt="Profile Picture" /> */}
+          {data.allFile.edges.map((item, index) => {
+            return (
+              <Img
+                fluid={item.node.childImageSharp.fluid}
+                key={index}
+                className="my-5"
+              />
+            );
+          })}
         </div>
         <div className="hidden sm:block sm:w-1/4 sm:pl-10">
-          {sideInfo.map(i => (
-            <div className="border-l-4 border-red px-5 my-10">
+          {sideInfo.map((i, iIndex) => (
+            <div
+              className="border-l-4 border-red px-5 my-10"
+              key={"sideInfoGroup-" + iIndex}
+            >
               <FontAwesomeIcon
                 icon={i.icon}
                 className="text-red mb-3 text-2xl"
               />
               <ul>
-                {i.nodes.map(j => (
-                  <li>{j}</li>
+                {i.nodes.map((j, jIndex) => (
+                  <li key={"sideInfoContent-" + jIndex}>{j}</li>
                 ))}
               </ul>
             </div>
@@ -143,6 +157,7 @@ export default function SabayWebsite({ data }) {
             link={liveSite}
             name="Visit Live Site"
             className="inline-block justify-items-end"
+            type="external"
           ></LinkWithIcon>
         </div>
       </div>
@@ -152,6 +167,7 @@ export default function SabayWebsite({ data }) {
           icon={faBrowser}
           link={liveSite}
           name="Visit Live Site"
+          type="external"
         ></LinkWithIcon>
       </div>
     </Layout>

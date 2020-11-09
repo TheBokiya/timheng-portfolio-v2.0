@@ -26,12 +26,14 @@ const Project = function (props) {
     <StaticQuery
       query={graphql`
         query {
-          images: allFile(
-            filter: { sourceInstanceName: { eq: "coverImages" } }
+          allFile(
+            filter: {
+              sourceInstanceName: { eq: "images" }
+              relativeDirectory: { eq: "thumbnails" }
+            }
           ) {
             edges {
               node {
-                extension
                 relativePath
                 childImageSharp {
                   fluid {
@@ -44,8 +46,8 @@ const Project = function (props) {
         }
       `}
       render={data => {
-        const image = data.images.edges.find(
-          image => image.node.relativePath === props.cover
+        const image = data.allFile.edges.find(
+          image => image.node.relativePath === "thumbnails/" + props.cover
         );
         return renderImage(props, image);
       }}
