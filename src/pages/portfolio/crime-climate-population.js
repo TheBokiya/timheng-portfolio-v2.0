@@ -5,20 +5,16 @@ import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import LinkWithIcon from "../../components/linkWithIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBrowser,
-  faCode,
-  faToolbox,
-  faBrain,
-} from "@fortawesome/pro-light-svg-icons";
+import { faToolbox } from "@fortawesome/pro-light-svg-icons";
 import TabsForMobile from "../../components/tabsForMobile";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export const query = graphql`
   query {
     allFile(
       filter: {
         sourceInstanceName: { eq: "images" }
-        relativeDirectory: { eq: "fam" }
+        relativeDirectory: { eq: "crime" }
       }
       sort: { fields: childImageSharp___fluid___originalName }
     ) {
@@ -37,38 +33,26 @@ export const query = graphql`
 
 const sideInfo = [
   {
-    group: "Skillset",
-    icon: faBrain,
-    nodes: ["Mockup", "Web Development", "Communication + Collaboration"],
-  },
-  {
     group: "Technologies",
     icon: faToolbox,
-    nodes: ["Jekyll Framework"],
-  },
-  {
-    group: "Languages",
-    icon: faCode,
-    nodes: ["Ruby on Rails", "Liquid", "HTML", "SASS", "JS"],
+    nodes: ["Procesing", "controlP5", "Unfolding Maps"],
   },
 ];
 
 const responsibilities = [
-  "Researching and brainstorming ideas",
-  "Wireframing and designing UI mockups",
-  "Implementing photo gallery feature with FTP",
-  "Implementing image storage solution",
-  "Implementing app widget",
+  "Researching and retrieving the dataset",
+  "Identifying what type of questions is the visualization supposed to answer",
+  "Designing the visual representation of the collected dataset",
+  "Developing the prototype",
 ];
 
 const outcome = [
-  "Able to brainstorm, design and build an android app from scratch",
-  "Able to do research and look for different approaches to solve a problem",
-  "Able to do research and look for different approaches to solve a problem",
-  "Able to work in small team to create a medium size project",
+  "Able to work with both Processing and Eclipse to build a visual representation.",
+  "Able to design and develop a good visual representation system to shows the data appropriately",
+  "Able to analyze and work with large amount of data",
 ];
 
-const liveSite = "https://sabay.com/";
+const githubLink = "https://github.com/TheBokiya/Crime--Climate---Population";
 
 export default function CrimeClimatePopulation({ data }) {
   return (
@@ -85,26 +69,20 @@ export default function CrimeClimatePopulation({ data }) {
           <iframe
             width="800"
             height="500"
-            src="https://www.youtube.com/embed/sptYrJaehKo"
+            src="https://www.youtube.com/embed/AW8lF-7vvKk"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             className="w-full"
           ></iframe>
           <p>
-            Fam is an android application that is made for an Android
-            application development class. It's a utility app that helps
-            connecting members of busy families through out the day. It is a
-            central hub for family communication, allowing family members to
-            stay up-to-date with one another without having to open multiple
-            applications and social networking sites. Connect calendars to
-            coordinate schedules, post messages to a central board, swipe
-            gestures for immediate one-touch notifications, share photos,
-            organize check lists, and constantly remain aware of each other’s
-            whereabouts. Simple, quick, and intuitive. Fam’s comprehensive list
-            of communication tools and utilities ensures families stay
-            organized, updated, and most importantly, connected to one another.
-            Fam is an app built by me with a partner.
+            Crime, Climate and Population is a project that a partner and I made
+            for Visual Analytics class. This project aims to answer whether
+            there's a correlation between crime rate, annual climate and
+            population in the U.S. The system reads three different datasets
+            (csv files), crime rate data, climate data and population data. The
+            data is presented using choropleth map to allow easy analysis and
+            interaction with each individual state.
           </p>
           <hr className="my-5" />
           <div className="sm:flex">
@@ -154,9 +132,9 @@ export default function CrimeClimatePopulation({ data }) {
             </div>
           ))}
           <LinkWithIcon
-            icon={faBrowser}
-            link={liveSite}
-            name="Visit Live Site"
+            icon={faGithub}
+            link={githubLink}
+            name="Visit Repository"
             className="inline-block justify-items-end"
             type="external"
           ></LinkWithIcon>
@@ -165,9 +143,9 @@ export default function CrimeClimatePopulation({ data }) {
       <TabsForMobile list={sideInfo}></TabsForMobile>
       <div className="flex sm:hidden justify-end">
         <LinkWithIcon
-          icon={faBrowser}
-          link={liveSite}
-          name="Visit Live Site"
+          icon={faGithub}
+          link={githubLink}
+          name="Visit Repository"
           type="external"
         ></LinkWithIcon>
       </div>

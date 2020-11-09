@@ -37,19 +37,17 @@ export const query = graphql`
 
 const sideInfo = [
   {
-    group: "Skillset",
-    icon: faBrain,
-    nodes: ["Mockup", "Web Development", "Communication + Collaboration"],
-  },
-  {
     group: "Technologies",
     icon: faToolbox,
-    nodes: ["Jekyll Framework"],
-  },
-  {
-    group: "Languages",
-    icon: faCode,
-    nodes: ["Ruby on Rails", "Liquid", "HTML", "SASS", "JS"],
+    nodes: [
+      "JAVA",
+      "XML",
+      "Android SDK",
+      "MySQL",
+      "Apache Commons",
+      "Adobe Illustrator",
+      "Adobe Photoshop",
+    ],
   },
 ];
 
