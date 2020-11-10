@@ -5,8 +5,8 @@ import { faHeart } from "@fortawesome/pro-solid-svg-icons";
 export default function footer() {
   const [isVisible, setIsVisible] = useState(false);
   return (
-    <div className="absolute bottom-0 right-0 my-2">
-      <div className="text-xs mx-5">
+    <div className="bg-navy mb-3">
+      <div className="text-xs mx-5 text-right">
         Made with
         <FontAwesomeIcon
           icon={faHeart}
