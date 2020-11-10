@@ -6,6 +6,7 @@ import { faAt } from "@fortawesome/pro-duotone-svg-icons";
 import { faLaptopCode } from "@fortawesome/pro-light-svg-icons";
 import { Helmet } from "react-helmet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Footer from "../components/footer";
 
 const contacts = [
   {
@@ -68,6 +69,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer></Footer>
     </Layout>
   );
 }
