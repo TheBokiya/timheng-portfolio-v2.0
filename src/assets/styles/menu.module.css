@@ -1,0 +1,8 @@
+.dropdownChevron {
+  transform: rotate(0deg);
+  transition: transform 1s linear;
+}
+
+.dropdownChevron-up .dropdownChevron {
+  transform: rotate(180deg);
+}

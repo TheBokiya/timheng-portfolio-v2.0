@@ -4,74 +4,7 @@ import { Helmet } from "react-helmet";
 import Project from "../components/project";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlassesAlt } from "@fortawesome/pro-light-svg-icons";
-
-const portfolio = [
-  {
-    group: "Development",
-    projects: [
-      {
-        title: "SSN Website",
-        cover: "ssn-thumbnail.png",
-        page: "/portfolio/ssn-website",
-      },
-      {
-        title: "Sabay Corporate Website",
-        cover: "sabay-thumbnail.png",
-        page: "/portfolio/sabay-website",
-      },
-      {
-        title: "FAM",
-        cover: "fam-thumbnail.png",
-        page: "/portfolio/fam",
-      },
-      {
-        title: "SWAPP",
-        cover: "swapp-thumbnail.png",
-        page: "/portfolio/swapp",
-      },
-      {
-        title: "COMMOT",
-        cover: "commot-thumbnail.png",
-        page: "/portfolio/commot",
-      },
-    ],
-  },
-  {
-    group: "Visual Analytics",
-    projects: [
-      {
-        title: "Exploring User-Definable Graph Layouts",
-        cover: "udgl-thumbnail.png",
-        page: "/portfolio/udgl",
-      },
-      {
-        title: "Crime, Climate & Population",
-        cover: "ccp-thumbnail.png",
-        page: "/portfolio/crime-climate-population",
-      },
-      {
-        title: "Movie Ratings Viz",
-        cover: "movie-ratings-thumbnail.png",
-        page: "/portfolio/movie-ratings",
-      },
-    ],
-  },
-  {
-    group: "Design",
-    projects: [
-      {
-        title: "Project MOMO",
-        cover: "momo-thumbnail.png",
-        page: "/portfolio/project-momo",
-      },
-      {
-        title: "Science World Evaluation",
-        cover: "science-world-thumbnail.png",
-        page: "/portfolio/science-world",
-      },
-    ],
-  },
-];
+import portfolioData from "../assets/data/project-data";
 
 export default function Portfolio() {
   return (
@@ -86,7 +19,7 @@ export default function Portfolio() {
         </h1>
         <p>
           As a designer with a programming background, I became a front-end
-          developer and have developed interests in ux/ui design, web
+          developer and have developed interests in UI/UX design, web
           development and visual analytics. For the past few years, I've worked
           on numerous web applications mainly as a UI/UX designer and front-end
           developer.
@@ -99,10 +32,16 @@ export default function Portfolio() {
         <p>Below are some of my favourite projects that I've worked on.</p>
       </div>
       <hr className="my-8" />
-      {portfolio.map((i, index) => {
+      {portfolioData.map((i, index) => {
         return (
           <div className="mb-10" key={index}>
-            <h3 className="text-2xl mb-5">{i.group}</h3>
+            <h3 className="text-2xl mb-5">
+              <FontAwesomeIcon
+                icon={i.icon}
+                className="text-red mr-3"
+              ></FontAwesomeIcon>
+              {i.group}
+            </h3>
             <div className="flex flex-wrap">
               {i.projects.map((j, index) => {
                 return (
