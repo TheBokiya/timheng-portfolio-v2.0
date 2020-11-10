@@ -12,7 +12,7 @@ function renderImage(props, file) {
             fluid={file.node.childImageSharp.fluid}
             className={"w-full z-0 " + thumbnailStyle.thumbnail}
           />
-          <div className="bg-grey-light p-3 text-navy font-bold inline-block z-10 absolute -mt-8 ml-5">
+          <div className="bg-grey-light px-3 py-2 text-navy font-bold inline-block z-10 absolute -mt-6 ml-5 text-sm">
             {props.title}
           </div>
         </div>
