@@ -5,12 +5,7 @@ import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import LinkWithIcon from "../../components/linkWithIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBrowser,
-  faCode,
-  faToolbox,
-  faBrain,
-} from "@fortawesome/pro-light-svg-icons";
+import { faBrowser, faToolbox } from "@fortawesome/pro-light-svg-icons";
 import TabsForMobile from "../../components/tabsForMobile";
 
 export const query = graphql`
@@ -123,12 +118,12 @@ export default function MovieRatings({ data }) {
             className="w-full"
           ></iframe>
           <p>
-            This is a personal project that I've worked on. The objective of
-            this project is to allow myself to explore and experiment what can
-            be done by combining JavaFX and CSV data. This page will not be the
-            same as other portfolio project pages on this site as I want this to
-            be a project showcase and a blog post about the project, because why
-            not?
+            This is a personal project that I&apos;ve worked on. The objective
+            of this project is to allow myself to explore and experiment what
+            can be done by combining JavaFX and CSV data. This page will not be
+            the same as other portfolio project pages on this site as I want
+            this to be a project showcase and a blog post about the project,
+            because why not?
           </p>
           <hr className="my-5" />
           <div className="sm:flex">
@@ -152,10 +147,10 @@ export default function MovieRatings({ data }) {
           <hr className="my-5" />
           <p>
             Before I started working on this project, I knew I wanted to work
-            with CSV data and JavaFX. I just wasn't sure what kind of data I'm
-            interested in working on. I came across a movie dataset in CSV file
-            format that has ratings information about movies and I felt that
-            this would be a fun and interesting project to work on. In this
+            with CSV data and JavaFX. I just wasn&apos;t sure what kind of data
+            I&apos;m interested in working on. I came across a movie dataset in
+            CSV file format that has ratings information about movies and I felt
+            that this would be a fun and interesting project to work on. In this
             post, I will discuss about the features implemented into the
             visualization, approaches and challenges that came up during the
             development process. Source code can be accessed through GitHub.
@@ -214,11 +209,11 @@ export default function MovieRatings({ data }) {
           <p>
             Obviously, this project can be improved. My future plans for this
             project are to implement a search option that allows the user to
-            type in the movie's title. Other search filter algorithms should be
-            implemented as well such filter the movies by ratings. I'd also like
-            to improve the application in a way that would support a movie with
-            multiple types of genres because currently it can only switch
-            between any individual genre.
+            type in the movie&apos;s title. Other search filter algorithms
+            should be implemented as well such filter the movies by ratings.
+            I&apos;d also like to improve the application in a way that would
+            support a movie with multiple types of genres because currently it
+            can only switch between any individual genre.
           </p>
         </div>
         <div className="hidden sm:block sm:w-1/4 sm:pl-10">

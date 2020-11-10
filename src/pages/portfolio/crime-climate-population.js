@@ -78,7 +78,7 @@ export default function CrimeClimatePopulation({ data }) {
           <p>
             Crime, Climate and Population is a project that a partner and I made
             for Visual Analytics class. This project aims to answer whether
-            there's a correlation between crime rate, annual climate and
+            there&apos;s a correlation between crime rate, annual climate and
             population in the U.S. The system reads three different datasets
             (csv files), crime rate data, climate data and population data. The
             data is presented using choropleth map to allow easy analysis and

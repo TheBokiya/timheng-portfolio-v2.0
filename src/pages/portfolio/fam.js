@@ -84,7 +84,7 @@ export default function Fam({ data }) {
           ></iframe>
           <p>
             Fam is an android application that is made for an Android
-            application development class. It's a utility app that helps
+            application development class. It&apos;s a utility app that helps
             connecting members of busy families through out the day. It is a
             central hub for family communication, allowing family members to
             stay up-to-date with one another without having to open multiple

@@ -4,9 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRight,
   faBars,
-  faChartScatter,
-  faCode,
-  faPencilRuler,
   faTimes,
 } from "@fortawesome/pro-light-svg-icons";
 import { faChevronDown } from "@fortawesome/pro-solid-svg-icons";

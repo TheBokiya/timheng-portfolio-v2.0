@@ -3,14 +3,8 @@ import Layout from "../../components/layout";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
-import LinkWithIcon from "../../components/linkWithIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBrowser,
-  faCode,
-  faToolbox,
-  faBrain,
-} from "@fortawesome/pro-light-svg-icons";
+import { faToolbox } from "@fortawesome/pro-light-svg-icons";
 import TabsForMobile from "../../components/tabsForMobile";
 
 export const query = graphql`
@@ -82,10 +76,10 @@ export default function ProjectMomo({ data }) {
           <p>
             Momo is a robotic pet that keeps the user be aware of the light
             usage that the user is in. Momo likes to live in the dark, she can
-            walk and breathe in the dark. However, when there's too much light
-            in the room, she would panic and if being exposed to the light for
-            too long she would eventually die. In order to bring her back to her
-            calm happy life, the user must dim down or turn off the light.
+            walk and breathe in the dark. However, when there&apos;s too much
+            light in the room, she would panic and if being exposed to the light
+            for too long she would eventually die. In order to bring her back to
+            her calm happy life, the user must dim down or turn off the light.
           </p>
           <hr className="my-5" />
           <div className="sm:flex">

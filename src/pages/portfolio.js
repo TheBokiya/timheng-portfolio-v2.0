@@ -15,21 +15,21 @@ export default function Portfolio() {
       <div className="mt-5">
         <h1 className="text-4xl font-black mb-5">
           <FontAwesomeIcon icon={faGlassesAlt} className="mr-5 text-red" />
-          What I've Done
+          What I&apos;ve Done
         </h1>
         <p>
           As a designer with a programming background, I became a front-end
           developer and have developed interests in UI/UX design, web
-          development and visual analytics. For the past few years, I've worked
-          on numerous web applications mainly as a UI/UX designer and front-end
-          developer.
+          development and visual analytics. For the past few years, I&apos;ve
+          worked on numerous web applications mainly as a UI/UX designer and
+          front-end developer.
         </p>
         <p>
           My academic career has also shaped my interest in research-focused
           projects mostly in the scope of visual analytics and personal
           informatics.
         </p>
-        <p>Below are some of my favourite projects that I've worked on.</p>
+        <p>Below are some of my favourite projects that I&apos;ve worked on.</p>
       </div>
       <hr className="my-8" />
       {portfolioData.map((i, index) => {

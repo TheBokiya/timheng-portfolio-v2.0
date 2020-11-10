@@ -58,10 +58,10 @@ export default function SSNWebsite({ data }) {
           />
           <p>
             In a team of three people, we were tasked to perform a heuristic
-            evaluation to find usability problems in Science World's website. We
-            started off this project by coming up with a list of user's goals
-            for the website such as checking out the schedule, buying tickets
-            and booking a field trip etc.
+            evaluation to find usability problems in Science World&apos;s
+            website. We started off this project by coming up with a list of
+            user&apos;s goals for the website such as checking out the schedule,
+            buying tickets and booking a field trip etc.
           </p>
           <p>
             Once we had all the goals listed out, we then proceeded to task
