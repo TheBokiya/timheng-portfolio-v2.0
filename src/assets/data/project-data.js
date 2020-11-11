@@ -71,6 +71,11 @@ const portfolio = [
         cover: "science-world-thumbnail.png",
         page: "/portfolio/science-world",
       },
+      {
+        title: "Whatsapp Conceptual Design",
+        cover: "whatsapp-conceptual-thumbnail.png",
+        page: "/portfolio/whatsapp-conceptual-design",
+      },
     ],
   },
 ];
