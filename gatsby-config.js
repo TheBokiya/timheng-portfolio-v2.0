@@ -29,5 +29,17 @@ module.exports = {
         anonymize: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Tim Bodyka Heng`,
+        short_name: `Tim Heng`,
+        start_url: `/`,
+        background_color: `#1d2d50`,
+        theme_color: `#f9fcfb`,
+        display: `standalone`,
+        icon: `static/favicon.png`,
+      },
+    },
   ],
 };
