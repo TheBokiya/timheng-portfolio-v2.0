@@ -8,10 +8,12 @@ function renderImage(props, file) {
     <div className="w-full sm:w-1/2 lg:w-1/3 px-1 my-5">
       <Link to={props.page} className="static">
         <div className="relative">
-          <Img
-            fluid={file.node.childImageSharp.fluid}
-            className={"w-full z-0 " + thumbnailStyle.thumbnail}
-          />
+          <div className="overflow-hidden">
+            <Img
+              fluid={file.node.childImageSharp.fluid}
+              className={thumbnailStyle.thumbnail + " w-full z-0"}
+            />
+          </div>
           <div className="bg-grey-light px-3 py-2 text-navy font-bold inline-block z-10 absolute -mt-6 ml-5 text-sm">
             {props.title}
           </div>
