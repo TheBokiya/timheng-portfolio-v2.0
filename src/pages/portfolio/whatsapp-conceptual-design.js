@@ -57,13 +57,14 @@ export default function WhatsappConceptualDesign({ data }) {
             className="mb-5"
           />
           <p>
-            As a regular WhatsApp user, I believe WhatsApp's UI can be improved
-            to provide a better user experience than the current design. This is
-            my personal project that I worked on by designing an alternative
-            WhatsApp's UI for iOS 7. Minimalistic design with clear sense of app
-            navigation and context would give the user the freedom to control
-            the flow of the app. It's not always about how things look, but it's
-            also about the flow and the functionalties of a product. True story.
+            As a regular WhatsApp user, I believe WhatsApp&apos;s UI can be
+            improved to provide a better user experience than the current
+            design. This is my personal project that I worked on by designing an
+            alternative WhatsApp&apos;s UI for iOS 7. Minimalistic design with
+            clear sense of app navigation and context would give the user the
+            freedom to control the flow of the app. It&apos;s not always about
+            how things look, but it&apos;s also about the flow and the
+            functionalties of a product. True story.
           </p>
           <hr className="my-5" />
           {data.allFile.edges.map((item, index) => {
