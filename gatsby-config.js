@@ -6,6 +6,12 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: `Tim Bodyka Heng's Portfolio`,
+    siteUrl: `https://timheng.com`,
+    description: `Personal portfolio website showcasing my work and experiences.`,
+    author: `Tim Bodyka Heng`,
+  },
   plugins: [
     `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
