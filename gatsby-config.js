@@ -18,5 +18,16 @@ module.exports = {
         path: `${__dirname}/src/assets/img`,
       },
     },
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        // your google analytics tracking id
+        trackingId: `G-7ZPMH2K7EP`,
+        // Puts tracking script in the head instead of the body
+        head: true,
+        // enable ip anonymization
+        anonymize: true,
+      },
+    },
   ],
 };
