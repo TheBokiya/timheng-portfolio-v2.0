@@ -2,8 +2,9 @@
   font-family: "Playfair Display", serif;
   font-style: italic;
   border-bottom: 1px solid theme("colors.white");
-}
-.link:hover {
-  background-color: theme("colors.navy.light");
-  border-bottom: solid 2px theme("colors.red");
+
+  &:hover {
+    background-color: theme("colors.navy.light");
+    border-bottom: solid 2px theme("colors.red");
+  }
 }
