@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import linkStyle from "../assets/styles/link.module.css";
 
-export default function linkWithIcon(props) {
+const LinkWithIcon = props => {
   if (props.type === "internal") {
     return (
       <div className="my-2">
@@ -33,4 +33,6 @@ export default function linkWithIcon(props) {
       </div>
     );
   }
-}
+};
+
+export default LinkWithIcon;

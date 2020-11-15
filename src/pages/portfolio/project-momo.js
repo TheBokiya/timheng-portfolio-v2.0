@@ -54,7 +54,7 @@ const outcome = [
   "Able to collaborate with colleagues to achieve a common goal",
 ];
 
-export default function ProjectMomo({ data }) {
+const ProjectMomo = ({ data }) => {
   return (
     <Layout>
       <Helmet>
@@ -143,4 +143,6 @@ export default function ProjectMomo({ data }) {
       <TabsForMobile list={sideInfo}></TabsForMobile>
     </Layout>
   );
-}
+};
+
+export default ProjectMomo;

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/pro-light-svg-icons";
 import linkStyle from "../assets/styles/link.module.css";
 
-export default function Paper(props) {
+const Paper = props => {
   return (
     <div className="my-20">
       <div className="flex">
@@ -33,4 +33,6 @@ export default function Paper(props) {
       </div>
     </div>
   );
-}
+};
+
+export default Paper;

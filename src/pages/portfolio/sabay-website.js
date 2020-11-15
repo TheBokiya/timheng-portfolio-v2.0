@@ -60,7 +60,7 @@ const outcome = [
 
 const liveSite = "https://sabay.com/";
 
-export default function SabayWebsite({ data }) {
+const SabayWebsite = ({ data }) => {
   return (
     <Layout>
       <Helmet>
@@ -148,4 +148,6 @@ export default function SabayWebsite({ data }) {
       </div>
     </Layout>
   );
-}
+};
+
+export default SabayWebsite;

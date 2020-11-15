@@ -2,7 +2,7 @@ import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function tabsForMobile(props) {
+const TabsForMobile = props => {
   return (
     <Tabs className="block sm:hidden my-10">
       <TabList>
@@ -25,4 +25,6 @@ export default function tabsForMobile(props) {
       ))}
     </Tabs>
   );
-}
+};
+
+export default TabsForMobile;

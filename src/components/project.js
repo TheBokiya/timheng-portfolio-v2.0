@@ -23,7 +23,7 @@ function renderImage(props, file) {
   );
 }
 
-const Project = function (props) {
+const Project = props => {
   return (
     <StaticQuery
       query={graphql`

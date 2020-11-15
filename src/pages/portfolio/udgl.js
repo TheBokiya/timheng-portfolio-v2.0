@@ -54,7 +54,7 @@ const outcome = [
 
 const githubLink = "https://github.com/TheBokiya/UDGraphLayout";
 
-export default function Udgl({ data }) {
+const Udgl = ({ data }) => {
   return (
     <Layout>
       <Helmet>
@@ -162,4 +162,6 @@ export default function Udgl({ data }) {
       <TabsForMobile list={sideInfo}></TabsForMobile>
     </Layout>
   );
-}
+};
+
+export default Udgl;

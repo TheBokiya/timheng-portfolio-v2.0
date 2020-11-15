@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/pro-solid-svg-icons";
 
-export default function footer() {
+const Footer = () => {
   const [isVisible, setIsVisible] = useState(false);
   return (
     <div className="bg-navy mb-3">
@@ -24,4 +24,6 @@ export default function footer() {
       </div>
     </div>
   );
-}
+};
+
+export default Footer;

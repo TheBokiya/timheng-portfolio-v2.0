@@ -62,7 +62,7 @@ const takeAway = [
 
 const liveSite = "https://ssn.digital/";
 
-export default function SSNWebsite({ data }) {
+const SSNWebsite = ({ data }) => {
   return (
     <Layout>
       <Helmet>
@@ -166,4 +166,6 @@ export default function SSNWebsite({ data }) {
       </div>
     </Layout>
   );
-}
+};
+
+export default SSNWebsite;

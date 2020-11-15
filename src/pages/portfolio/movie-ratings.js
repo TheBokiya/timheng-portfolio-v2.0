@@ -52,7 +52,7 @@ const outcome = [
 
 const liveSite = "https://github.com/TheBokiya/MovieProject";
 
-export default function MovieRatings({ data }) {
+const MovieRatings = ({ data }) => {
   const overallImg = data.allFile.edges.find(
     image => image.node.relativePath === "movie_ratings/movie_ratings-04.png"
   );
@@ -253,4 +253,6 @@ export default function MovieRatings({ data }) {
       </div>
     </Layout>
   );
-}
+};
+
+export default MovieRatings;

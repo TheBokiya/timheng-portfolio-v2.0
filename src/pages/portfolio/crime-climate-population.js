@@ -54,7 +54,7 @@ const outcome = [
 
 const githubLink = "https://github.com/TheBokiya/Crime--Climate---Population";
 
-export default function CrimeClimatePopulation({ data }) {
+const CrimeClimatePopulation = ({ data }) => {
   return (
     <Layout>
       <Helmet>
@@ -151,4 +151,6 @@ export default function CrimeClimatePopulation({ data }) {
       </div>
     </Layout>
   );
-}
+};
+
+export default CrimeClimatePopulation;

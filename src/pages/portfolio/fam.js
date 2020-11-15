@@ -63,7 +63,7 @@ const outcome = [
 
 const liveSite = "https://sabay.com/";
 
-export default function Fam({ data }) {
+const Fam = ({ data }) => {
   return (
     <Layout>
       <Helmet>
@@ -164,4 +164,6 @@ export default function Fam({ data }) {
       </div>
     </Layout>
   );
-}
+};
+
+export default Fam;

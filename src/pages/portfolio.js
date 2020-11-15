@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlassesAlt } from "@fortawesome/pro-light-svg-icons";
 import portfolioData from "../assets/data/project-data";
 
-export default function Portfolio() {
+const Portfolio = () => {
   return (
     <Layout>
       <Helmet>
@@ -59,4 +59,6 @@ export default function Portfolio() {
       })}
     </Layout>
   );
-}
+};
+
+export default Portfolio;

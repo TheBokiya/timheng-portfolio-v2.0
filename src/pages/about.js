@@ -100,7 +100,7 @@ export const query = graphql`
   }
 `;
 
-export default function About({ data }) {
+const About = ({ data }) => {
   return (
     <Layout>
       <Helmet>
@@ -196,4 +196,6 @@ export default function About({ data }) {
       </div>
     </Layout>
   );
-}
+};
+
+export default About;

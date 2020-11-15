@@ -3,7 +3,7 @@ import Menu from "./menu";
 import Footer from "./footer";
 import SEO from "../components/seo";
 
-export default function Layout({ children }) {
+const Layout = ({ children }) => {
   return (
     <div className="flex flex-col h-screen justify-between">
       <SEO title="Tim Bodyka Heng Portfolio"></SEO>
@@ -12,4 +12,6 @@ export default function Layout({ children }) {
       <Footer className="block w-full"></Footer>
     </div>
   );
-}
+};
+
+export default Layout;

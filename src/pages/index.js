@@ -25,7 +25,7 @@ const contacts = [
   },
 ];
 
-export default function Home() {
+const Home = () => {
   return (
     <Layout>
       <Helmet>
@@ -71,4 +71,6 @@ export default function Home() {
       {/* <Footer></Footer> */}
     </Layout>
   );
-}
+};
+
+export default Home;

@@ -56,7 +56,7 @@ const sideInfo = [
 
 const liveSite = "https://commot.asia/";
 
-export default function SSNWebsite({ data }) {
+const SSNWebsite = ({ data }) => {
   const bannerImg = data.allFile.edges.find(
     img => img.node.relativePath === "commot/commot-desktop-4.png"
   );
@@ -141,4 +141,6 @@ export default function SSNWebsite({ data }) {
       </div>
     </Layout>
   );
-}
+};
+
+export default SSNWebsite;
