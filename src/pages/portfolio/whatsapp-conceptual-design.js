@@ -38,7 +38,7 @@ const sideInfo = [
   },
 ];
 
-export default function WhatsappConceptualDesign({ data }) {
+const WhatsappConceptualDesign = ({ data }) => {
   const bannerImg = data.allFile.edges.find(
     image => image.node.relativePath === "whatsapp/whatsapp-01.png"
   );
@@ -99,4 +99,6 @@ export default function WhatsappConceptualDesign({ data }) {
       <TabsForMobile list={sideInfo}></TabsForMobile>
     </Layout>
   );
-}
+};
+
+export default WhatsappConceptualDesign;

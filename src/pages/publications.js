@@ -45,7 +45,7 @@ const papers = [
   },
 ];
 
-export default function Publications() {
+const Publications = () => {
   return (
     <Layout>
       <Helmet>
@@ -78,4 +78,6 @@ export default function Publications() {
       </div>
     </Layout>
   );
-}
+};
+
+export default Publications;

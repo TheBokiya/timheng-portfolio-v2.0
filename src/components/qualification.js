@@ -1,7 +1,7 @@
 import React from "react";
 import linkStyle from "../assets/styles/link.module.css";
 
-export default function Qualification(props) {
+const Qualification = props => {
   return (
     <div className="my-8">
       <div>
@@ -26,4 +26,6 @@ export default function Qualification(props) {
       <div className="text-xs">{props.location}</div>
     </div>
   );
-}
+};
+
+export default Qualification;

@@ -41,7 +41,7 @@ const outcome = [
   "Able to deliver a report that highlights usability issues along with suggested improvements",
 ];
 
-export default function SSNWebsite({ data }) {
+const ScienceWorld = ({ data }) => {
   return (
     <Layout>
       <Helmet>
@@ -130,4 +130,6 @@ export default function SSNWebsite({ data }) {
       </div>
     </Layout>
   );
-}
+};
+
+export default ScienceWorld;

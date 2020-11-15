@@ -29,7 +29,7 @@ const menuItems = [
   },
 ];
 
-export default function Menu() {
+const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
 
@@ -138,4 +138,6 @@ export default function Menu() {
       </header>
     </div>
   );
-}
+};
+
+export default Menu;

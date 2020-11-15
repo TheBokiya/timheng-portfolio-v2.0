@@ -59,7 +59,7 @@ const outcome = [
   "Able to build a full functioning web app with a small team (a back-end + a front-end)",
 ];
 
-export default function Swapp({ data }) {
+const Swapp = ({ data }) => {
   const bannerImg = data.allFile.edges.find(
     image => image.node.relativePath === "swapp/swapp-05.png"
   );
@@ -147,4 +147,6 @@ export default function Swapp({ data }) {
       <TabsForMobile list={sideInfo}></TabsForMobile>
     </Layout>
   );
-}
+};
+
+export default Swapp;
