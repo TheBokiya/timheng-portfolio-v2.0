@@ -7,7 +7,6 @@ import {
   faTimes,
 } from "@fortawesome/pro-light-svg-icons";
 import { faChevronDown } from "@fortawesome/pro-solid-svg-icons";
-import menuStyle from "../assets/styles/menu.module.css";
 import portfolioData from "../assets/data/project-data";
 
 const menuItems = [
@@ -76,9 +75,7 @@ const Menu = () => {
                   {item.page}
                   <FontAwesomeIcon
                     icon={faChevronDown}
-                    className={
-                      menuStyle.dropdownChevron + " hidden sm:inline-block ml-2"
-                    }
+                    className="hidden sm:inline-block ml-2"
                   ></FontAwesomeIcon>
                 </Link>
               );

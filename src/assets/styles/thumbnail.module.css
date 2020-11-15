@@ -1,7 +1,6 @@
 .thumbnail {
   transition: transform 0.2s;
-}
-
-.thumbnail:hover {
-  transform: scale(1.2);
+  &:hover {
+    transform: scale(1.2);
+  }
 }
